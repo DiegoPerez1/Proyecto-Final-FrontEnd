@@ -1,21 +1,31 @@
-import "../Styles/Start.css"
+import "../Styles/Start.css";
 
 function Start() {
-  return(
-  <div className="container">
-    <section className="top-container">
-      <img src="../src/assets/logo.svg"/>
-      <h3>Música a medida.</h3>
-    </section>
-    <section className="bottom-container">
-      <button>Registrarse Gratis</button>
-      <button>Continuar con Google</button>
-      <button>Continuar con Apple</button>
-      <button>Iniciar Sesión</button>
-    </section>
-  </div>
-  )
-}
+  return (
+    <main id="container">
+      <div id="background">
+        <section id="top-container">
+          <img id="logo" src="../src/assets/logo.svg" />
+          <h3 id="title">Música a medida.</h3>
+        </section>
 
+        <section id="bottom-container">
+          <div id="btn-container">
+            <button id="btn-register">Registrarse Gratis</button>
+            <div className="login-with">
+              <img  className="icon" src="../src/assets/google-icon.svg" />
+              <button id="btn-google">Continuar con Google</button>
+            </div>
+            <div className="login-with">
+              <img className="icon" src="../src/assets/apple-icon.svg" />
+              <button id="btn-apple">Continuar con Apple</button>
+            </div>
+            <button id="btn-login">Iniciar Sesión</button>
+          </div>
+        </section>
+      </div>
+    </main>
+  );
+}
 
 export default Start;
