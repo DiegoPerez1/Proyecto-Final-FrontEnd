@@ -1,0 +1,17 @@
+.container{
+width:418px ;
+height: 792px;
+background-image: url("../src/assets/fondo.gif");
+background-repeat: no-repeat;
+Opacity: 50%
+}
+.top-container{
+  width: 368px;
+  height: 368px;
+}
+.bottom-container{
+  width: 368px;
+  height: 338px;
+  display: flex;
+  flex-direction: column;
+}
