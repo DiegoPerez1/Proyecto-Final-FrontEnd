@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import logo from "../src/assets/logo.svg"
 import appleIcon from "../src/assets/apple-icon.svg"
 import googleIcon from "../src/assets/google-icon.svg"
+import Navbar from "./NavBar";
 
 function Start() {
   return (
