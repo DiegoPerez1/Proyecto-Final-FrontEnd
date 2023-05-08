@@ -1,13 +1,5 @@
 .containerSignIn {
-    margin: 0%;
-    padding: 0%;
-    width: 100%;
-    height: 100%;
-    padding: 0%;
-    margin: 0%;
     background: linear-gradient(360deg, rgba(253, 254, 255, 0) 40%, rgba(255, 141, 10, 0.288) 95%, rgba(255, 141, 10, 0.363) 100%);
-
-
 }
 
 .form {
@@ -15,6 +7,48 @@
     justify-content: center;
     align-items: center;
 }
+
+.titleSectionSignIn {
+    margin-top: 3rem;
+    padding: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.formSectionSignIn {
+    margin-top: 3rem;
+    padding: 7px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttonSignIn {
+    margin-top: 50px;
+}
+
+.checkBox {
+    margin-top: 30px;
+    gap: 10px;
+
+}
+
+.checkSignIn {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+}
+
+.buttonSectionSignIn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
 
 .input {
     outline-color: #FF8E0A;
@@ -40,39 +74,18 @@
 }
 
 .header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    gap: 100px;
 
 }
 
-.buttonSignin {
+.button {
+    position: absolute;
     width: 320px;
     height: 48px;
     left: 22px;
+    top: 416px;
     background: #E4E6E8;
     border-radius: 0px 16px;
     cursor: pointer;
-}
-
-
-
-.titleSectionSignin {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 7rem;
-}
-
-.formSectionSignin {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.buttonSectionSignin {
-    margin-top: 8rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin-top: 3rem;
 }

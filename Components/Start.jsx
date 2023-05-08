@@ -15,7 +15,7 @@ function Start() {
 
         <section id="bottom-container">
           <div id="btn-container">
-            <button id="btn-register">Registrarse Gratis</button>
+            <Link to="/signin "> <button id="btn-register">Registrarse Gratis</button></Link>
             <div className="login-with">
               <img className="icon" src={appleIcon} />
               <button id="btn-google">Continuar con Google</button>

@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom';
 import leftArrow from '../src/assets/Vector.svg'
 import '../Styles/Login.css'
 
@@ -7,28 +8,24 @@ export default class LogIn extends Component {
         return (
             <div className='ContainerLogIn'>
                 <section className='header'>
-                    <img src={leftArrow} alt="" className='arrow' /><p>Crear cuenta</p>
+                    <Link to='/'>  <img src={leftArrow} alt="" className='arrow' /></Link>
+                    <p>Iniciar sesion</p>
                 </section>
                 <br />
-                <section>
-                    <h2>Ingresa un nombre de usuario y una contraseña</h2>
+                <section className='titleSection'>
+                    <h2>Nombre de usuario o E-mail</h2>
+                    <input className='input' type="text" />
                 </section>
                 <br />
-                <section>
-                    <label htmlFor="">Nombre de usuario:</label>
-                    <input className='input' type="text" />
-                </section>
-                <section>
-                    <label htmlFor="">Contraaseña:</label>
-                    <input className='input' type="text" />
-                    <p>Debera contener al menos 8 caracteres</p>
-                </section>
-                <section className='checkBox'>
-                    <input type="checkbox" className='checkLogin' /> <p>He leido y acepto los Terminos y Condiciones</p>
-                </section>
-                <section className='buttonSection'>
-                    <button className='button'>Continuar</button>
-                </section>
+                <form className='formSection'>
+                    <section>
+                        <label htmlFor="">Contraseña:</label>
+                        <input className='input' type="text" />
+                    </section>
+                    <section className='buttonSection'>
+                        <button className='button'>Iniciar sesion</button>
+                    </section>
+                </form>
             </div>
 
         )
