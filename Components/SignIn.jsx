@@ -5,9 +5,9 @@ import leftArrow from '../src/assets/Vector.svg'
 export default class SignIn extends Component {
     render() {
         return (
-            <div className='bg'>
-                <section className='arrowSection'>
-                    <img src={leftArrow} alt="" /> <p>Crear cuenta</p>
+            <div className='containerSignIn'>
+                <section className='header'>
+                    <img src={leftArrow} alt="" className='arrow' /><p>Crear cuenta</p>
                 </section>
                 <br />
                 <section>
@@ -18,6 +18,9 @@ export default class SignIn extends Component {
                     <label htmlFor="">Correo electronico:</label>
                     <input className='input' type="text" />
                     <p>Deberias poder confirmarlo luego</p>
+                </section>
+                <section className='buttonSection'>
+                    <button className='button'>Continuar</button>
                 </section>
             </div>
         )
