@@ -1,6 +1,13 @@
+<<<<<<< HEAD
 html {
     width: 100%;
     height: 100%;
     background: linear-gradient(180deg, rgba(253, 254, 255, 0) 25%, rgba(255, 142, 10, 0.133647) 84.37%, rgba(255, 142, 10, 0.225) 100%);
 
+=======
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+>>>>>>> cbe44992d385d36d98dd6df2df09e66ef2658c9e
 }
