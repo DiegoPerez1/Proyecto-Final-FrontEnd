@@ -10,15 +10,15 @@ function Start() {
     <main id="container">
       <div id="background">
         <section id="top-container">
-          <img id="logo" src={logo}/>
+          <img id="logo" src={logo} />
           <h3 id="title">Música a medida.</h3>
         </section>
 
         <section id="bottom-container">
           <div id="btn-container">
-            <button id="btn-register">Registrarse Gratis</button>
+            <Link to="/signin "> <button id="btn-register">Registrarse Gratis</button></Link>
             <div className="login-with">
-              <img  className="icon" src={appleIcon} />
+              <img className="icon" src={appleIcon} />
               <button id="btn-google">Continuar con Google</button>
             </div>
             <div className="login-with">

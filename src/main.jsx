@@ -8,6 +8,8 @@ import SignIn from '../Components/SignIn.jsx';
 import Navbar from '../Components/NavBar';
 import Home from '../Components/Home';
 import Search from '../Components/Search';
+import LogIn from '../Components/LogIn';
+import Signin2 from '../Components/Signin2';
 
 const router = createBrowserRouter([
   {
@@ -16,7 +18,15 @@ const router = createBrowserRouter([
   },
   {
     path: "/login",
-    element: <SignIn/>,
+    element: <LogIn />,
+  },
+  {
+    path: "/signin",
+    element: <SignIn />,
+  },
+  {
+    path: "/signin-2",
+    element: <Signin2 />,
   },
   {
     path: "/nav",
