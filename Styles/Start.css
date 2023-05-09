@@ -11,7 +11,6 @@
   background-size: cover;
   background-image: url("../src/assets/fondo.gif");
 }
-
 #background::before {
   content: "";
   position: absolute;
@@ -31,16 +30,18 @@
   align-items: center;
 }
 #logo {
-  z-index: 1;
-  opacity: 1;
+  position: absolute;
   width: 207.64px;
-height: 72px;
+  height: 72px;
+  left: 80px;
+  top: 176px;
 }
-#title {
+#title-start {
+  position: absolute;
   width: 196px;
   height: 31px;
-  z-index: 1;
-  opacity: 1;
+  left: 86px;
+  top: 271.63px;
   font-family: "Rubik";
   font-style: normal;
   font-weight: 400;
@@ -66,7 +67,7 @@ height: 72px;
 #btn-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  padding-right: 2rem;
   align-items: center;
   gap: 32px;
 }
@@ -75,28 +76,28 @@ button {
   height: 48px;
   border: 2px solid #26262e;
   border-radius: 0px 16px;
-  font-family: 'Rubik';
-font-style: normal;
-font-weight: 500;
-font-size: 16px;
-line-height: 24px;
-text-align: center;
-letter-spacing: 0.5px;
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 0.5px;
 }
 #btn-register {
   background-color: #ff8e0a;
-  color: #FDFEFF;
+  color: #fdfeff;
   border: none;
 }
 #btn-login {
   border: none;
-  background-color: #FDFEFF;
+  background-color: #fdfeff;
 }
-.login-with{
+.login-with {
   display: flex;
   align-items: center;
 }
-.icon{
+.icon {
   position: absolute;
-  left: 6rem;
+  left: 4.5rem;
 }

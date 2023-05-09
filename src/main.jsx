@@ -10,6 +10,7 @@ import Home from '../Components/Home';
 import Search from '../Components/Search';
 import LogIn from '../Components/LogIn';
 import Signin2 from '../Components/Signin2';
+import CupidoMusical from '../Components/CupidoMusical';
 
 const router = createBrowserRouter([
   {
@@ -41,7 +42,11 @@ const router = createBrowserRouter([
         element: <Search />,
       },
     ],
-  }
+  },
+  {
+    path: "/cupido",
+    element: <CupidoMusical />,
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(

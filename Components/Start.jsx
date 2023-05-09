@@ -11,7 +11,7 @@ function Start() {
       <div id="background">
         <section id="top-container">
           <img id="logo" src={logo} />
-          <h3 id="title">Música a medida.</h3>
+          <h3 id="title-start">Música a medida.</h3>  
         </section>
 
         <section id="bottom-container">
