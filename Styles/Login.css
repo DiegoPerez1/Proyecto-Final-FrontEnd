@@ -1,66 +1,67 @@
 .ContainerLogIn {
-    margin: 0%;
-    padding: 0%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(360deg, rgba(253, 254, 255, 0) 40%, rgba(255, 141, 10, 0.288) 95%, rgba(255, 141, 10, 0.363) 100%);
-
+  margin: 0%;
+  padding: 0%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(360deg,
+      rgba(253, 254, 255, 0) 40%,
+      rgba(255, 141, 10, 0.288) 95%,
+      rgba(255, 141, 10, 0.363) 100%);
 }
 
 .inputLogIn {
-    outline-color: #FF8E0A;
-    border: 2px solid #E4E6E8;
-    border-radius: 0px 16px;
-    box-sizing: border-box;
-    width: 320px;
-    height: 48px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 0px 16px;
-    flex: none;
-    order: 1;
-    align-self: stretch;
-    flex-grow: 0;
+  outline-color: #ff8e0a;
+  border: 2px solid #e4e6e8;
+  border-radius: 0px 16px;
+  box-sizing: border-box;
+  width: 320px;
+  height: 48px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 16px;
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
 }
 
 .arrow {
-    position: absolute;
-    left: 5%;
-    cursor: pointer;
+  position: absolute;
+  left: 5%;
+  cursor: pointer;
 }
 
 .headerLogIn {
-    display: flex;
-    justify-content: center;
-    padding-top: 3rem;
-    font-size: 20px;
-
+  display: flex;
+  justify-content: center;
+  padding-top: 3rem;
+  font-size: 20px;
 }
 
 .buttonLogIn {
-    width: 320px;
-    height: 48px;
-    left: 22px;
-    top: 416px;
-    background: #E4E6E8;
-    border-radius: 0px 16px;
+  width: 320px;
+  height: 48px;
+  left: 22px;
+  top: 416px;
+  background: #e4e6e8;
+  border-radius: 0px 16px;
 }
 
 .buttonSectionLogIn {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 12px 16px;
-    gap: 12px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 16px;
+  gap: 12px;
 }
 
 .formSectionLogIn {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4rem;
 }
