@@ -11,6 +11,7 @@ import Search from '../Components/Search';
 import LogIn from '../Components/LogIn';
 import Signin2 from '../Components/Signin2';
 import Profile from '../Components/Profile';
+import ProfileConfig from '../Components/ProfileConfig';
 
 const router = createBrowserRouter([
   {
@@ -33,6 +34,11 @@ const router = createBrowserRouter([
     path: "/profile",
     element: <Profile />
   },
+  {
+    path: "/profile-config",
+    element: <ProfileConfig />
+  },
+
   {
     path: "/nav",
     element: <Navbar />,

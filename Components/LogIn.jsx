@@ -7,22 +7,22 @@ export default class LogIn extends Component {
     render() {
         return (
             <div className='ContainerLogIn'>
-                <section className='header'>
+                <section className='headerLogIn'>
                     <Link to='/'>  <img src={leftArrow} alt="" className='arrow' /></Link>
                     <p>Iniciar sesion</p>
                 </section>
                 <br />
-                <section className='titleSection'>
-                    <h2>Nombre de usuario o E-mail</h2>
-                    <input className='input' type="text" />
-                </section>
-                <br />
-                <form className='formSection'>
+                <form className='formSectionLogIn'>
+                    <section className='titleSectionLogIn'>
+                        <h3>Nombre de usuario o E-mail</h3>
+                        <input className='input' type="text" />
+                    </section>
+                    <br />
                     <section>
                         <label htmlFor="">Contraseña:</label>
                         <input className='input' type="text" />
                     </section>
-                    <section className='buttonSection'>
+                    <section className='buttonSectionLogIn'>
                         <button className='button'>Iniciar sesion</button>
                     </section>
                 </form>

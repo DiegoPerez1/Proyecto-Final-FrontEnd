@@ -2,4 +2,72 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-direction: column;
+        padding-top: 4rem;
+        background: linear-gradient(360deg, rgba(253, 254, 255, 0) 40%, rgba(255, 141, 10, 0.288) 95%, rgba(255, 141, 10, 0.363) 100%);
+    }
+
+    .configProfile {
+        position: absolute;
+        top: 9%;
+        right: 10%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0px;
+
+        position: absolute;
+        width: 48px;
+        height: 48px;
+        background: #FDFEFF;
+        border-radius: 24px;
+
+    }
+
+    .buttonSectionProfile {
+        margin-top: 2rem;
+        display: flex;
+        align-items: start;
+        gap: 10px;
+        justify-content: center;
+
+    }
+
+    .buttonProfile {
+        width: 100px;
+        height: 26px;
+        background: #FF8E0A;
+        border-radius: 0px 8px;
+        padding: 4px 8px;
+        gap: 4px;
+        font-size: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        outline: none;
+        border: none;
+    }
+
+    .line {
+        padding-top: 10px;
+    }
+
+    .playlistSectionProfile {
+        padding-top: 2rem;
+    }
+
+    .playlistProfile {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        width: 320px;
+        height: 400px;
+        left: 24px;
+        top: 352px;
+        overflow-y: scroll;
+        padding-top: 8rem;
     }
