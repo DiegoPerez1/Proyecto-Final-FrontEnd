@@ -5,6 +5,7 @@ import '../Styles/Signin2.css'
 
 export default class Signin2 extends Component {
     render() {
+
         return (
             <div className='containerSignIn'>
                 <section className='header'>
@@ -12,12 +13,18 @@ export default class Signin2 extends Component {
                     <p>Crear cuenta</p>
                 </section>
                 <br />
+
                 <section className='titleSectionSignIn'>
-                    <h2>Ingresa un nombre de usuario y una contraseña</h2>
+                    <h2>Ingresa email, nombre de usuario y contraseña</h2>
                 </section>
                 <br />
-                <form className='formSectionSignIn'>
-                    <section className='nameSection'>
+                <form className='formSectionSignIn' >
+                    <section className='emailSection'>
+                        <label htmlFor="">Correo electronico:</label>
+                        <input className='input' type="text" />
+                        <p>Deberias poder confirmarlo luego</p>
+                    </section>
+                    <section className='nameSectionSignIn'>
                         <label htmlFor="">Nombre de usuario:</label>
                         <input className='input' type="text" />
                     </section>
@@ -30,7 +37,7 @@ export default class Signin2 extends Component {
                         <input type="checkbox" className='checkSignIn' /> <p>He leido y acepto los Terminos y Condiciones</p>
                     </section>
                     <section className='buttonSectionSignIn'>
-                        <button className='button'>Continuar</button>
+                        <button className='buttonSignin '>Continuar</button>
                     </section>
                 </form>
             </div>
