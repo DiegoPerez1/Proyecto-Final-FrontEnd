@@ -12,6 +12,8 @@ import LogIn from '../Components/LogIn';
 import Signin2 from '../Components/Signin2';
 <<<<<<< HEAD
 import CupidoMusical from '../Components/CupidoMusical';
+import MusicaContextual from '../Components/MusicaContextual';
+import PlaylistMC from '../Components/PlaylistMC';
 =======
 import Profile from '../Components/Profile';
 import ProfileConfig from '../Components/ProfileConfig';
@@ -60,6 +62,14 @@ const router = createBrowserRouter([
   {
     path: "/cupido",
     element: <CupidoMusical />,
+  },
+  {
+    path: "/musicacontextual",
+    element: <MusicaContextual />,
+  },
+  {
+    path: "/playlistMC",
+    element: <PlaylistMC />,
   },
 ]);
 
