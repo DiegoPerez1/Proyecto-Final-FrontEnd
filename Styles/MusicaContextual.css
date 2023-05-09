@@ -1,0 +1,88 @@
+#container {
+    position: relative;
+    width: 368px;
+    height: 792px;
+    background: #fdfeff;
+}
+
+#top-gradient {
+    position: absolute;
+    height: 160px;
+    width: 418px;
+    background: linear-gradient(180deg,
+            rgba(253, 254, 255, 0) 25%,
+            rgba(255, 142, 10, 0.534586) 75%,
+            rgba(255, 142, 10, 0.9) 100%);
+    opacity: 0.25;
+    transform: rotate(-180deg);
+    z-index: 0;
+}
+
+.arrow {
+    position: absolute;
+    left: 5%;
+    top: 60%;
+    cursor: pointer;
+    height: 40%;
+}
+
+#headerMC {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    margin-bottom: 15px;
+    padding-top: 25px;
+}
+
+#contenedorInput {
+    margin: 10px 10px 5px 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+label {
+    font-size: 20px;
+    text-align: center;
+    padding-bottom: 10px;
+
+}
+
+#select-box {
+    font-size: 16px;
+    padding: 5px;
+    height: 40px;
+    border: 2px solid #26262e;
+    border-radius: 0px 16px;
+}
+
+.generos {
+    margin-left: 30px;
+}
+
+.genero {
+    height: fit-content;
+    width: fit-content;
+    padding: 5px;
+    /* justify-content: space-around; */
+    margin: 8px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+#contenedorGeneros {
+    margin: 0 auto;
+    margin-bottom: 5px;
+}
+
+#tituloGeneros {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+#crearPlaylist {
+    margin: 10px 25px;
+}

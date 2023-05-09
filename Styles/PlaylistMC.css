@@ -1,0 +1,117 @@
+#container {
+    position: relative;
+    width: 368px;
+    height: 792px;
+    background: #fdfeff;
+}
+
+#top-gradient {
+    position: absolute;
+    height: 160px;
+    width: 418px;
+    background: linear-gradient(180deg,
+            rgba(253, 254, 255, 0) 25%,
+            rgba(255, 142, 10, 0.534586) 75%,
+            rgba(255, 142, 10, 0.9) 100%);
+    opacity: 0.25;
+    transform: rotate(-180deg);
+    z-index: 0;
+}
+
+#headerMC {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    padding-top: 25px;
+}
+
+.arrow {
+    position: absolute;
+    left: 5%;
+    top: 60%;
+    cursor: pointer;
+    height: 40%;
+}
+
+#tituloheader1 {
+    font-size: 12px;
+    margin-bottom: 6px;
+    letter-spacing: 1px;
+    /* margin-left: -45px; */
+}
+
+#tituloheader2 {
+    font-size: 16px;
+    letter-spacing: 1px;
+    /* margin-left: -45px; */
+}
+
+#divfotosalbum {
+    height: 180px;
+    width: 180px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+#logosyduracion {
+    height: 25px;
+    width: 100%;
+    margin: 10px;
+    padding: 4px;
+    display: flex;
+    gap: 8px;
+}
+
+#history-icon {
+    position: absolute;
+    left: 90%;
+}
+
+#duracion-playlist {
+    position: absolute;
+    left: 78%;
+    font-size: 12px;
+}
+
+#crearcopiayplay {
+    height: 50px;
+    width: 100%;
+    margin: 10px;
+    margin-top: 30px;
+    padding: 4px;
+    display: flex;
+    gap: 8px;
+}
+
+#copy-icon {
+    height: 20px;
+    margin-left: 15px;
+}
+
+#crearcopia {
+    margin-left: 10px;
+    font-size: 16px;
+}
+
+#shuffle-icon {
+    position: absolute;
+    left: 75%;
+    height: 25px;
+}
+
+#play-icon {
+    position: absolute;
+    left: 85%;
+    height: 45px;
+    top: 37.5%;
+}
+
+#listacanciones {
+    height: 100px;
+    width: 100%;
+    margin: 10px;
+    padding: 4px;
+}
