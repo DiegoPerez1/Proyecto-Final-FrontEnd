@@ -1,21 +1,18 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import { createBrowserRouter } from 'react-router-dom';
-import { RouterProvider } from 'react-router-dom';
-import '../Styles/index.css'
-import Start from '../Components/Start.jsx';
-import SignIn from '../Components/SignIn.jsx';
-import Navbar from '../Components/NavBar';
-import Home from '../Components/Home';
-import Search from '../Components/Search';
-import LogIn from '../Components/LogIn';
-import Signin2 from '../Components/Signin2';
-<<<<<<< HEAD
-import CupidoMusical from '../Components/CupidoMusical';
-=======
-import Profile from '../Components/Profile';
-import ProfileConfig from '../Components/ProfileConfig';
->>>>>>> 0f6e26b9ed52ee8d657198272480ecf52f0873c3
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { createBrowserRouter } from "react-router-dom";
+import { RouterProvider } from "react-router-dom";
+import "../Styles/index.css";
+import Start from "../Components/Start.jsx";
+import SignIn from "../Components/SignIn.jsx";
+import Navbar from "../Components/NavBar";
+import Home from "../Components/Home";
+import Search from "../Components/Search";
+import LogIn from "../Components/LogIn";
+import Signin2 from "../Components/Signin2";
+import Profile from "../Components/Profile";
+import ProfileConfig from "../Components/ProfileConfig";
+import CupidoMusical from "../Components/CupidoMusical";
 
 const router = createBrowserRouter([
   {
@@ -36,11 +33,11 @@ const router = createBrowserRouter([
   },
   {
     path: "/profile",
-    element: <Profile />
+    element: <Profile />,
   },
   {
     path: "/profile-config",
-    element: <ProfileConfig />
+    element: <ProfileConfig />,
   },
 
   {
@@ -68,4 +65,3 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <RouterProvider router={router} />
   </React.StrictMode>
 );
-
