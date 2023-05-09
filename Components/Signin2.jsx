@@ -5,6 +5,10 @@ import '../Styles/Signin2.css'
 
 export default class Signin2 extends Component {
     render() {
+        const onSubmit = (data, e) => {
+            e.preventDefault();
+        }
+        const [showHome, setShowHome] = useState(false)
         return (
             <div className='containerSignIn'>
                 <section className='header'>
@@ -17,7 +21,7 @@ export default class Signin2 extends Component {
                     <h2>Ingresa email, nombre de usuario y contraseña</h2>
                 </section>
                 <br />
-                <form className='formSectionSignIn'>
+                <form className='formSectionSignIn' onSubmit={onSubmit}>
                     <section className='emailSection'>
                         <label htmlFor="">Correo electronico:</label>
                         <input className='input' type="text" />
