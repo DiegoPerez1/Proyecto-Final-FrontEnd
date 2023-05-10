@@ -140,13 +140,44 @@
 }
 
 #listacanciones {
-    height: 300px;
+    height: 320px;
     width: 100%;
     margin: 10px;
+    margin-top: 20px;
     padding: 4px;
+    overflow-y: scroll;
 }
 
-.listaCanciones {
+.listaFotos {
+    list-style: none;
+    /* Quitamos los puntos de la lista */
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 320px;
+}
+
+.list li {
     display: flex;
-    flex-wrap: wrap;
+    /* Usamos flexbox para alinear los elementos */
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#fotocancion {
+    margin-left: 10px;
+    margin-top: 50px;
+}
+
+h2 {
+    font-size: 15px;
+    margin-left: 150px;
+    margin-top: -35px;
+    width: fit-content;
+}
+
+#puntoslista {
+    margin-left: 625px;
+    height: 25px;
+    margin-top: -40px;
 }

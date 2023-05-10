@@ -15,7 +15,7 @@ import homeActive from "../src/assets/home-icon-active.svg";
 import searchActive from "../src/assets/search-icon-active.svg";
 import profileActive from "../src/assets/profile-icon-active.svg";
 import friendsActive from "../src/assets/friends-icon-active.svg";
-
+import Prueba from "../src/assets/prueba.svg"
 
 
 function PlaylistMC() {
@@ -42,15 +42,42 @@ function PlaylistMC() {
                 <img src={shuffle} id='shuffle-icon'></img>
                 <img src={play} id='play-icon'></img>
             </div>
-            <div id='listacanciones'></div>
-            <ul className='listaCanciones'>
-                {/* <img src={verified} alt="" /> Nombre canción <img src={tresPuntos} />
-                <img src={verified} alt="" /> Nombre canción <img src={tresPuntos} />
-                <img src={verified} alt="" /> Nombre canción <img src={tresPuntos} />
-                <img src={verified} alt="" /> Nombre canción <img src={tresPuntos} />
-                <img src={verified} alt="" /> Nombre canción <img src={tresPuntos} /> */}
+            <div id='listacanciones'>
+                <ul className='listaFotos'>
+                    <li id="puntosFotos">
+                        <img src={Prueba} id="fotocancion" />
+                        <h2> Nombre cancion </h2>
+                        <img src={tresPuntos} id="puntoslista"></img>
+                    </li>
+                    {/* <li id="puntosFotos">
+                        <img src={Prueba} id="fotocancion" />
+                        <h2> Nombre cancion </h2>
+                        <img src={tresPuntos}></img>
+                    </li> */}
+                    {/* <li id="puntosFotos">
+                        <img src={Prueba} id="fotocancion" />
+                        <h2> Nombre cancion </h2>
+                        <img src={tresPuntos}></img>
+                    </li>
+                    <li id="puntosFotos">
+                        <img src={Prueba} id="fotocancion" />
+                        <h2> Nombre cancion </h2>
+                        <img src={tresPuntos}></img>
+                    </li>
+                    <li id="puntosFotos">
+                        <img src={Prueba} id="fotocancion" />
+                        <h2> Nombre cancion </h2>
+                        <img src={tresPuntos}></img>
+                    </li>
+                    <li id="puntosFotos">
+                        <img src={Prueba} id="fotocancion" />
+                        <h2> Nombre cancion </h2>
+                        <img src={tresPuntos}></img>
+                    </li>  */}
 
-            </ul>
+
+                </ul>
+            </div>
             <nav id="nav-container">
                 <ul id="list-container">
                     <Link to="/nav/home"><li> <img src={homeActive} /> Inicio</li></Link>
