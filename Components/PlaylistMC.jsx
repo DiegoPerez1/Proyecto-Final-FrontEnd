@@ -46,36 +46,121 @@ function PlaylistMC() {
                 <ul className='listaFotos'>
                     <li id="puntosFotos">
                         <img src={Prueba} id="fotocancion" />
-                        <h2> Nombre cancion </h2>
+                        <h5> Nombre cancion </h5>
                         <img src={tresPuntos} id="puntoslista"></img>
                     </li>
-                    {/* <li id="puntosFotos">
-                        <img src={Prueba} id="fotocancion" />
-                        <h2> Nombre cancion </h2>
-                        <img src={tresPuntos}></img>
-                    </li> */}
-                    {/* <li id="puntosFotos">
-                        <img src={Prueba} id="fotocancion" />
-                        <h2> Nombre cancion </h2>
-                        <img src={tresPuntos}></img>
-                    </li>
+                </ul>
+                <ul className='listaFotos'>
                     <li id="puntosFotos">
                         <img src={Prueba} id="fotocancion" />
-                        <h2> Nombre cancion </h2>
-                        <img src={tresPuntos}></img>
+                        <h5> Nombre cancion </h5>
+                        <img src={tresPuntos} id="puntoslista"></img>
                     </li>
+                </ul>
+                <ul className='listaFotos'>
                     <li id="puntosFotos">
                         <img src={Prueba} id="fotocancion" />
-                        <h2> Nombre cancion </h2>
-                        <img src={tresPuntos}></img>
+                        <h5> Nombre cancion </h5>
+                        <img src={tresPuntos} id="puntoslista"></img>
                     </li>
+                </ul>
+                <ul className='listaFotos'>
                     <li id="puntosFotos">
                         <img src={Prueba} id="fotocancion" />
-                        <h2> Nombre cancion </h2>
-                        <img src={tresPuntos}></img>
-                    </li>  */}
-
-
+                        <h5> Nombre cancion </h5>
+                        <img src={tresPuntos} id="puntoslista"></img>
+                    </li>
+                </ul>
+                <ul className='listaFotos'>
+                    <li id="puntosFotos">
+                        <img src={Prueba} id="fotocancion" />
+                        <h5> Nombre cancion </h5>
+                        <img src={tresPuntos} id="puntoslista"></img>
+                    </li>
+                </ul>
+                <ul className='listaFotos'>
+                    <li id="puntosFotos">
+                        <img src={Prueba} id="fotocancion" />
+                        <h5> Nombre cancion </h5>
+                        <img src={tresPuntos} id="puntoslista"></img>
+                    </li>
+                </ul>
+                <ul className='listaFotos'>
+                    <li id="puntosFotos">
+                        <img src={Prueba} id="fotocancion" />
+                        <h5> Nombre cancion </h5>
+                        <img src={tresPuntos} id="puntoslista"></img>
+                    </li>
+                </ul>
+                <ul className='listaFotos'>
+                    <li id="puntosFotos">
+                        <img src={Prueba} id="fotocancion" />
+                        <h5> Nombre cancion </h5>
+                        <img src={tresPuntos} id="puntoslista"></img>
+                    </li>
+                </ul>
+                <ul className='listaFotos'>
+                    <li id="puntosFotos">
+                        <img src={Prueba} id="fotocancion" />
+                        <h5> Nombre cancion </h5>
+                        <img src={tresPuntos} id="puntoslista"></img>
+                    </li>
+                </ul>
+                <ul className='listaFotos'>
+                    <li id="puntosFotos">
+                        <img src={Prueba} id="fotocancion" />
+                        <h5> Nombre cancion </h5>
+                        <img src={tresPuntos} id="puntoslista"></img>
+                    </li>
+                </ul>
+                <ul className='listaFotos'>
+                    <li id="puntosFotos">
+                        <img src={Prueba} id="fotocancion" />
+                        <h5> Nombre cancion </h5>
+                        <img src={tresPuntos} id="puntoslista"></img>
+                    </li>
+                </ul>
+                <ul className='listaFotos'>
+                    <li id="puntosFotos">
+                        <img src={Prueba} id="fotocancion" />
+                        <h5> Nombre cancion </h5>
+                        <img src={tresPuntos} id="puntoslista"></img>
+                    </li>
+                </ul>
+                <ul className='listaFotos'>
+                    <li id="puntosFotos">
+                        <img src={Prueba} id="fotocancion" />
+                        <h5> Nombre cancion </h5>
+                        <img src={tresPuntos} id="puntoslista"></img>
+                    </li>
+                </ul>
+                <ul className='listaFotos'>
+                    <li id="puntosFotos">
+                        <img src={Prueba} id="fotocancion" />
+                        <h5> Nombre cancion </h5>
+                        <img src={tresPuntos} id="puntoslista"></img>
+                    </li>
+                </ul>
+                <ul className='listaFotos'>
+                    <li id="puntosFotos">
+                        <img src={Prueba} id="fotocancion" />
+                        <h5> Nombre cancion </h5>
+                        <img src={tresPuntos} id="puntoslista"></img>
+                    </li>
+                </ul>
+                <ul className='listaFotos'>
+                    <li id="puntosFotos">
+                        <img src={Prueba} id="fotocancion" />
+                        <h5> Nombre cancion </h5>
+                        <img src={tresPuntos} id="puntoslista"></img>
+                    </li>
+                </ul>
+                <ul className='listaFotos'>
+                    <li id="puntosFotos">
+                        <img src={Prueba} id="fotocancion" />
+                        <h5> Nombre cancion </h5>
+                        <img src={tresPuntos} id="puntoslista"></img>
+                    </li>
                 </ul>
             </div>
             <nav id="nav-container">
