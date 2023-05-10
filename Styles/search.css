@@ -39,7 +39,7 @@ padding-left: 56px;
   display: flex;
   flex-direction: column;
   gap: 5px;
-padding: 10px 30px ;
+padding: 10px 20px ;
   height: auto;
   max-height: 500px; /* Establece la altura máxima para que se active el scroll */
   width: 312px;
@@ -48,4 +48,36 @@ padding: 10px 30px ;
   top: 200px;
   left: 35px;
   overflow-y: scroll;
+}
+#track-container{
+  display: flex;
+  
+}
+#foto{
+  width: 48px;
+height: 48px;
+}
+#artist-and-name{
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  padding-left: 16px;
+  width: 200px;
+}
+#artist,
+#song-name{
+  font-family: 'Rubik';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 21px;
+letter-spacing: 0.5px;
+color: #26262E;
+}
+#song-name{
+font-weight: 400;
+font-size: 12px;
+line-height: 18px;
+color: #838486;
 }
