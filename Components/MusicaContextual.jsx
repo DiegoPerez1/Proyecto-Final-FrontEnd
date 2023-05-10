@@ -3,20 +3,22 @@ import "../Styles/MusicaContextual.css"
 import leftArrow from "../src/assets/Vector.svg";
 import { Link } from "react-router-dom";
 
-
-function SelectBox(props) {
+function Dropdown(props) {
     const { selectedOption, handleChange, options } = props;
+
 
     return (
         <div id='contenedorInput'>
             <label htmlFor="select-box">{options.label}</label>
-            <select id="select-box" value={selectedOption} onChange={handleChange}>
-                {options.choices.map((option) => (
-                    <option key={option.value} value={option.value}>
-                        {option.label}
-                    </option>
-                ))}
-            </select>
+            <div className="dropdown">
+                <select id="select-box" value={selectedOption} onChange={handleChange}>
+                    {options.choices.map((option) => (
+                        <option id="options" key={option.value} value={option.value}>
+                            {option.label}
+                        </option>
+                    ))}
+                </select>
+            </div>
         </div>
     );
 }
@@ -37,13 +39,7 @@ function MusicaContextual() {
 
     const handleChange2 = (event) => {
         setSelectedOption2(event.target.value);
-        if (event.target.value === "opcion1") {
-            setIsEstiloElectronica(true);
-        } else {
-            setIsEstiloElectronica(false);
-        }
     };
-
     const handleChange3 = (event) => {
         setSelectedOption3(event.target.value);
     };
@@ -90,9 +86,9 @@ function MusicaContextual() {
                 <Link to='/nav/home'>  <img src={leftArrow} alt="" className='arrowMC' /></Link>
                 Música Contextual
             </div>
-            <SelectBox selectedOption={selectedOption1} handleChange={handleChange1} options={options1} />
-            <SelectBox selectedOption={selectedOption2} handleChange={handleChange2} options={options2} />
-            <SelectBox selectedOption={selectedOption3} handleChange={handleChange3} options={options3} />
+            <Dropdown selectedOption={selectedOption1} handleChange={handleChange1} options={options1} />
+            <Dropdown selectedOption={selectedOption2} handleChange={handleChange2} options={options2} />
+            <Dropdown selectedOption={selectedOption3} handleChange={handleChange3} options={options3} />
             <div id='contenedorGeneros'>
                 <p id='tituloGeneros'>Selecciona hasta 3 géneros:</p>
                 <div className='generos'>
