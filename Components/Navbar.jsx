@@ -9,13 +9,19 @@ function Navbar() {
   return (
     <div className="container">
       <div>
-        <Outlet/>
+        <Outlet />
       </div>
       <nav id="nav-container">
         <ul id="list-container">
+<<<<<<< HEAD
         <Link to="/nav/home"><li> <img src={homeActive}/> Inicio</li></Link>
          <Link to="/nav/search"><li> <img src={searchActive} /> Buscador</li></Link>
           <Link to="/nav/profile"><li> <img src={profileActive} /> Perfil</li></Link>
+=======
+          <Link to="/nav/home"><li> <img src={homeActive} /> Inicio</li></Link>
+          <Link to="/nav/search"><li> <img src={searchActive} /> Buscador</li></Link>
+          <li> <img src={profileActive} /> Perfil</li>
+>>>>>>> 61cc1be24c0fec79f064d4eda0b23707593fa6a6
           <li> <img src={friendsActive} /> Amigos</li>
         </ul>
       </nav>

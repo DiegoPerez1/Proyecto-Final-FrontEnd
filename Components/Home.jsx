@@ -3,6 +3,7 @@ import historyIcon from "../src/assets/history.svg";
 import notificationIcon from "../src/assets/notification.svg";
 import cupido from "../src/assets/cupido.svg";
 import contextual from "../src/assets/contextual.svg";
+import { Link } from "react-router-dom";
 
 function Home() {
   return (
@@ -26,9 +27,9 @@ function Home() {
             </div>
           </li>
           <li className="item">
-            <img className="img-playlist" src={contextual} />
+            <Link to="/musicacontextual"> <img className="img-playlist" src={contextual} /></Link>
             <div className="text">
-              <h4 className="title">Música Contextual</h4>
+              <Link to="/musicacontextual"><h4 className="title">Música Contextual</h4></Link>
               <p className="details">Creamos la playlist perfecta para cualquier situación.</p>
             </div>
           </li>
