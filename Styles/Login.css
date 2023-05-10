@@ -30,7 +30,7 @@
   flex-grow: 0;
 }
 
-.arrow {
+.arrowLogIn {
   position: absolute;
   left: 5%;
   cursor: pointer;

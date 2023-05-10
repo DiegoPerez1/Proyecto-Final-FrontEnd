@@ -51,7 +51,7 @@ function Login() {
       <section className="headerLogIn">
         <Link to="/">
           {" "}
-          <img src={leftArrow} alt="" className="arrow" />
+          <img src={leftArrow} alt="" className="arrowLogIn" />
         </Link>
         <p>Iniciar sesion</p>
       </section>

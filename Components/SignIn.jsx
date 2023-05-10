@@ -9,7 +9,7 @@ function SignIn() {
         <div className='containerSignIn'>
             <section >
                 <section className='headerArrow'>
-                    <Link to='/'>  <img src={leftArrow} alt="" className='arrow' /></Link>
+                    <Link to='/'>  <img src={leftArrow} alt="" className='arrowSignIn' /></Link>
                 </section>
                 <section className='headerText'>
                     <p>Crear cuenta</p>

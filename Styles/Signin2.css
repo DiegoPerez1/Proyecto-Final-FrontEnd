@@ -74,10 +74,11 @@ a {
     flex-grow: 0;
 }
 
-.arrow {
+.arrowSignIn {
     position: absolute;
     left: 5%;
     cursor: pointer;
+    padding-top: 3rem;
 }
 
 .header {

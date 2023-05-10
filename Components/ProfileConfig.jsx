@@ -8,7 +8,7 @@ function ProfileConfig() {
         <div className='containerProfileConfig '>
             <section >
                 <section>
-                    <Link to='/profile'><img src={leftArrow} alt="" className='arrow' /></Link>
+                    <Link to='/profile'><img src={leftArrow} alt="" className='arrowConfig' /></Link>
                 </section>
                 <section className='headerText'>
                     <h4>Configuracion</h4>

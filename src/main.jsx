@@ -1,3 +1,4 @@
+
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { createBrowserRouter } from 'react-router-dom';
@@ -11,6 +12,8 @@ import Search from '../Components/Search';
 import LogIn from '../Components/LogIn';
 import Signin2 from '../Components/Signin2';
 import CupidoMusical from '../Components/CupidoMusical';
+import MusicaContextual from '../Components/MusicaContextual';
+import PlaylistMC from '../Components/PlaylistMC';
 import Profile from '../Components/Profile';
 import ProfileConfig from '../Components/ProfileConfig';
 
@@ -33,11 +36,11 @@ const router = createBrowserRouter([
   },
   {
     path: "/profile",
-    element: <Profile />
+    element: <Profile />,
   },
   {
     path: "/profile-config",
-    element: <ProfileConfig />
+    element: <ProfileConfig />,
   },
 
   {
@@ -58,6 +61,14 @@ const router = createBrowserRouter([
     path: "/cupido",
     element: <CupidoMusical />,
   },
+  {
+    path: "/musicacontextual",
+    element: <MusicaContextual />,
+  },
+  {
+    path: "/playlistMC",
+    element: <PlaylistMC />,
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
@@ -65,4 +76,3 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <RouterProvider router={router} />
   </React.StrictMode>
 );
-
