@@ -1,7 +1,7 @@
-#container {
+#containercontodo {
     position: relative;
-    width: 368px;
-    height: 792px;
+    width: 390px;
+    height: 120px;
     background: #fdfeff;
 }
 
@@ -28,12 +28,19 @@
     padding-top: 25px;
 }
 
-.arrow {
+.arrowMC {
     position: absolute;
     left: 5%;
-    top: 60%;
+    top: 40%;
     cursor: pointer;
-    height: 40%;
+    height: 20px;
+}
+
+#trespuntos {
+    height: 25px;
+    position: absolute;
+    left: 90%;
+
 }
 
 #tituloheader1 {
@@ -54,15 +61,32 @@
     width: 180px;
     margin: 0 auto;
     padding: 10px;
+    margin-bottom: 15px;
 }
 
 #logosyduracion {
-    height: 25px;
+    height: 35px;
     width: 100%;
     margin: 10px;
     padding: 4px;
     display: flex;
     gap: 8px;
+    margin-top: 15px;
+}
+
+#placeholder {
+    height: 30px;
+    margin-left: 5px;
+}
+
+#verified {
+    height: 20px;
+    margin-top: 5px
+}
+
+#share {
+    height: 50px;
+    margin-top: 3px
 }
 
 #history-icon {
@@ -74,10 +98,11 @@
     position: absolute;
     left: 78%;
     font-size: 12px;
+    margin-top: 2px
 }
 
 #crearcopiayplay {
-    height: 50px;
+    height: 70px;
     width: 100%;
     margin: 10px;
     margin-top: 30px;
@@ -87,31 +112,41 @@
 }
 
 #copy-icon {
-    height: 20px;
+    height: 25px;
     margin-left: 15px;
+    margin-top: 20px;
 }
 
 #crearcopia {
-    margin-left: 10px;
+
     font-size: 16px;
+    margin-left: 15px;
+    margin-top: 23px;
 }
 
 #shuffle-icon {
     position: absolute;
-    left: 75%;
-    height: 25px;
+    left: 72%;
+    height: 30px;
+    margin-top: 23px;
 }
 
 #play-icon {
     position: absolute;
-    left: 85%;
-    height: 45px;
-    top: 37.5%;
+    left: 83.5%;
+    height: 50px;
+    top: 41.5%;
+    color: rgba(234, 156, 10, 0.856);
 }
 
 #listacanciones {
-    height: 100px;
+    height: 300px;
     width: 100%;
     margin: 10px;
     padding: 4px;
+}
+
+.listaCanciones {
+    display: flex;
+    flex-wrap: wrap;
 }

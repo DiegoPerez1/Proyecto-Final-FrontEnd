@@ -18,7 +18,7 @@
     z-index: 0;
 }
 
-.arrow {
+.arrowMC {
     position: absolute;
     left: 5%;
     top: 60%;
@@ -30,12 +30,12 @@
     position: relative;
     z-index: 2;
     text-align: center;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
     padding-top: 25px;
 }
 
 #contenedorInput {
-    margin: 10px 10px 5px 10px;
+    margin: 20px 10px 5px 10px;
     padding: 10px;
     display: flex;
     flex-direction: column;
@@ -80,9 +80,77 @@ label {
     font-size: 20px;
     text-align: center;
     margin-bottom: 15px;
-    margin-top: 15px;
+    margin-top: 35px;
 }
 
-#crearPlaylist {
+.crearPlaylist {
+    margin-top: 35px;
+    margin-left: 30px;
+    border-color: rgb(218, 218, 218);
+    background-color: rgb(218, 218, 218);
+    color: white;
+}
+
+.selected {
+    background-color: black;
+    color: white;
+    height: fit-content;
+    width: fit-content;
+    padding: 5px;
+    /* justify-content: space-around; */
+    margin: 8px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.selected2 {
     margin: 10px 25px;
+    background-color: orange;
+    color: white;
+}
+
+select option {
+    background-color: #f2f2f2;
+    color: #333;
+    font-size: 16px;
+}
+
+.genero1 {
+    pointer-events: none;
+    height: fit-content;
+    width: fit-content;
+    padding: 5px;
+    margin: 8px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.electronica1 {
+    height: fit-content;
+    width: fit-content;
+    padding: 5px;
+    /* justify-content: space-around; */
+    margin: 8px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.electronica2 {
+    height: fit-content;
+    width: fit-content;
+    padding: 5px;
+    /* justify-content: space-around; */
+    margin: 8px;
+    font-size: 12px;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+}
+
+.crearPlaylistEnabled {
+    background-color: orange;
+    color: white;
+    border-color: white;
+    margin-top: 35px;
+    margin-left: 30px;
 }
