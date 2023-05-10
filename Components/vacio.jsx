@@ -32,9 +32,7 @@ function Search() {
 
         const filtradas = respuesta.canciones.filter(
           (cancion) =>
-            cancion.nombre.toLowerCase().includes(input.toLowerCase()) ||
-            cancion.artista_id.includes(input)
-      
+            cancion.nombre.toLowerCase().includes(input.toLowerCase())
         );
         setCancionesFiltradas(filtradas);
       } else {
@@ -66,7 +64,7 @@ function Search() {
         return (
           <div key={index}>
             <div>{item.nombre}</div>
-            <div>{item.artista_id}</div>
+            <div>{item.artista}</div>
           </div>
         );
       })}

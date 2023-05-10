@@ -3,6 +3,7 @@ import "../Styles/CupidoMusical.css";
 import Vector from "../src/assets/Vector.svg";
 import like from "../src/assets/green-heart.svg";
 import pass from "../src/assets/red-cross.svg";
+import marley from "../src/assets/cupido-img/marley.png"
 
 function CupidoMusical() {
 
@@ -22,7 +23,7 @@ function CupidoMusical() {
         <p id="cupido-title">Cupido Musical</p>
       </header>
       <main>
-        <img id="img-artist" src="../src/assets/cupido-img/marley.png" />
+        <img id="img-artist" src={marley} />
         <section id="both-icons">
           <button className="icon-btn" onClick={onClickLike}>
             <img src={like} />
