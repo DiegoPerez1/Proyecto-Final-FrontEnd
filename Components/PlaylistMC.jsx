@@ -55,7 +55,7 @@ function PlaylistMC() {
                 <ul id="list-container">
                     <Link to="/nav/home"><li> <img src={homeActive} /> Inicio</li></Link>
                     <Link to="/nav/search"><li> <img src={searchActive} /> Buscador</li></Link>
-                    <li> <img src={profileActive} /> Perfil</li>
+                    <Link to="/profile"><li> <img src={profileActive} /> Perfil</li></Link>
                     <li> <img src={friendsActive} /> Amigos</li>
                 </ul>
             </nav>
