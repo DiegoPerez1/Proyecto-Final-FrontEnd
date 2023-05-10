@@ -19,6 +19,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 1.5rem;
 }
 
 .buttonSectionSignIn {
@@ -30,16 +31,22 @@
 
 }
 
-.checkBox {
+.checkBoxSignIn {
     margin-top: 30px;
     gap: 10px;
+    display: flex;
 
 }
 
+a {
+    text-decoration: none;
+    color: #FF8E0A;
+}
+
 .checkSignIn {
-    display: flex;
-    justify-content: start;
-    align-items: start;
+    border: 3px solid #BFC0C1;
+    border-radius: 0px 8px;
+    text-decoration: none;
 }
 
 .buttonSectionSignIn {
@@ -67,15 +74,36 @@
     flex-grow: 0;
 }
 
-.arrow {
+.arrowSignIn {
     position: absolute;
     left: 5%;
     cursor: pointer;
+    padding-top: 3rem;
 }
 
 .header {
     gap: 100px;
 
+}
+
+.emailSection {
+    font-size: 20px;
+
+}
+
+.nameSectionSignIn {
+    font-size: 20px;
+}
+
+.passwordSectionSignIn {
+    font-size: 20px;
+
+}
+
+.passVerification {
+    color: #838486;
+    font-size: 12px;
+    padding-top: 10px;
 }
 
 .buttonSignin {

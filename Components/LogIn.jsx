@@ -51,16 +51,16 @@ function Login() {
       <section className="headerLogIn">
         <Link to="/">
           {" "}
-          <img src={leftArrow} alt="" className="arrow" />
+          <img src={leftArrow} alt="" className="arrowLogIn" />
         </Link>
         <p>Iniciar sesion</p>
       </section>
       <br />
       <form className="formSectionLogIn" action="submit" onSubmit={login}>
         <section className="titleSectionLogIn">
-          <h3>Nombre de usuario</h3>
+          <p>Nombre de usuario</p>
           <input
-            className="input"
+            className="inputLogIn"
             type="text"
             onChange={(e) => {
               setUser(e.target.value);
@@ -69,10 +69,10 @@ function Login() {
           />
         </section>
         <br />
-        <section>
+        <section className="passwordSectionLogin">
           <label htmlFor="">Contraseña:</label>
           <input
-            className="input"
+            className="inputLogIn"
             type="text"
             onChange={(e) => {
               setPass(e.target.value);
@@ -81,7 +81,7 @@ function Login() {
           />
         </section>
         <section className="buttonSectionLogIn">
-          <button className="button" type="submit">
+          <button className="buttonLogIn" type="submit">
             Iniciar sesion
           </button>
         </section>
