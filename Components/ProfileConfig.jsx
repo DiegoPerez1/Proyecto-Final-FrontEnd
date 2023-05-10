@@ -6,9 +6,15 @@ import line from '../src/assets/largedivider.svg'
 function ProfileConfig() {
     return (
         <div className='containerProfileConfig '>
-            <section className='headerProfileConfig'>
-                <Link to='/profile'><img src={leftArrow} alt="" className='arrow' /></Link>
-                <h4>Configuracion</h4>
+            <section >
+                <section>
+                    <Link to='/profile'><img src={leftArrow} alt="" className='arrow' /></Link>
+                </section>
+                <section className='headerText'>
+                    <h4>Configuracion</h4>
+                </section>
+
+
             </section>
             <section className='buttonSectionProfileConfig'>
                 <button id='buttonConfig1'>Editar apariencia</button>

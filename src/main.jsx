@@ -10,12 +10,9 @@ import Home from '../Components/Home';
 import Search from '../Components/Search';
 import LogIn from '../Components/LogIn';
 import Signin2 from '../Components/Signin2';
-<<<<<<< HEAD
 import CupidoMusical from '../Components/CupidoMusical';
-=======
 import Profile from '../Components/Profile';
 import ProfileConfig from '../Components/ProfileConfig';
->>>>>>> 0f6e26b9ed52ee8d657198272480ecf52f0873c3
 
 const router = createBrowserRouter([
   {

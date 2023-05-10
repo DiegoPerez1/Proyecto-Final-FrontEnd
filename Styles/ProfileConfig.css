@@ -20,6 +20,22 @@
     gap: 1rem;
 }
 
+.arrowConfig {
+    position: absolute;
+    left: 5%;
+    padding-top: 3rem;
+    cursor: pointer;
+}
+
+.headerText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3rem;
+    font-size: 20px;
+    color: #26262E;
+}
+
 #buttonConfig1 {
     background: #FF8E0A;
     border-radius: 0px 16px;
