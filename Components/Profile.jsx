@@ -22,7 +22,7 @@ export default function Profile() {
             <section className='buttonSectionProfile'>
                 <h5>Mis playlist</h5>
                 <img src={line} alt="" className='line' />
-                <button className='buttonProfile'>Crear playlist</button>
+                <Link to={'/create-playlist'}> <button className='buttonProfile'>Crear playlist</button></Link>
             </section>
             <section className='playlistSectionProfile'>
                 <ul className='playlistProfile'>

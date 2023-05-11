@@ -16,6 +16,8 @@ import MusicaContextual from '../Components/MusicaContextual';
 import PlaylistMC from '../Components/PlaylistMC';
 import Profile from '../Components/Profile';
 import ProfileConfig from '../Components/ProfileConfig';
+import Playlists from '../Components/Playlists';
+import CreatePlaylist from '../Components/CreatePlaylist';
 
 const router = createBrowserRouter([
   {
@@ -39,10 +41,17 @@ const router = createBrowserRouter([
     element: <Profile />,
   },
   {
+    path: "/playlist",
+    element: <Playlists />,
+  },
+  {
     path: "/profile-config",
     element: <ProfileConfig />,
   },
-
+  {
+    path: "/create-playlist",
+    element: <CreatePlaylist />,
+  },
   {
     path: "/nav",
     element: <Navbar />,
