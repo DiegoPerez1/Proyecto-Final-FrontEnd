@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 function Dropdown(props) {
     const { selectedOption, handleChange, options } = props;
 
-
     return (
         <div id='contenedorInput'>
             <label htmlFor="select-box">{options.label}</label>
@@ -24,6 +23,7 @@ function Dropdown(props) {
 }
 
 
+
 function MusicaContextual() {
     const [selectedOption1, setSelectedOption1] = useState("");
     const [selectedOption2, setSelectedOption2] = useState("");
@@ -38,7 +38,7 @@ function MusicaContextual() {
 
     const handleChange2 = (event) => {
         setSelectedOption2(event.target.value);
-    };
+    }
     const handleChange3 = (event) => {
         setSelectedOption3(event.target.value);
     };
