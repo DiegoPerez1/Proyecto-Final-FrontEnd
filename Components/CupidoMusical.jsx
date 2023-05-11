@@ -8,14 +8,21 @@ import marley from "../src/assets/cupido-img/marley.png";
 
 function CupidoMusical() {
   const [artistas, setArtistas] = useState([]);
+  const [currentArtist, setCurrentArtist] = useState([]);
   const [artistasSelect, setArtistasSelect] = useState([]);
   const navigate = useNavigate();
 
+
   useEffect(() => {
     const fetchArtistas = async () => {
-      const response = await fetch("/api/artistas");
+      const response = await fetch("/api/artistas", {method:'GET'});
+      console.log(response)
       const data = await response.json();
+      console.log(data)
       setArtistas(data);
+      if(data.length > 0) {
+        setCurrentArtist(data[0])
+      }
     };
     fetchArtistas();
   }, []);
@@ -73,16 +80,14 @@ function CupidoMusical() {
         <section id="artist-selection">
           <h2>Selecciona tus artistas favoritos</h2>
           <ul>
-            {artistas.map((artista) => (
-              <li
-                key={artista.nombre}
-                onClick={() => handleSelectArtista(artista.nombre)}
+          <li
+                key={currentArtist.nombre}
+                onClick={() => handleSelectArtista(currentArtist.nombre)}
                 className={
-                  artistasSelect.includes(artista.nombre) ? "selected" : ""
+                  artistasSelect.includes(currentArtist.nombre) ? "selected" : ""
                 }>
-                {artista.nombre}
+                {currentArtist.nombre}
               </li>
-            ))}
           </ul>
         </section>
         <section id="both-icons">
