@@ -24,7 +24,6 @@ function Dropdown(props) {
 }
 
 
-
 function MusicaContextual() {
     const [selectedOption1, setSelectedOption1] = useState("");
     const [selectedOption2, setSelectedOption2] = useState("");
