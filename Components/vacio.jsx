@@ -2,7 +2,6 @@ import { useState } from "react";
 import "../Styles/search.css";
 import iconInput from "../src/assets/search-icon-input.svg";
 
-
 function Search() {
   const [canciones, setCanciones] = useState([]);
   const [input, setInput] = useState("");
@@ -31,8 +30,9 @@ function Search() {
         const respuesta = await response.json();
         setCanciones(respuesta.canciones);
 
-        const filtradas = respuesta.canciones.filter((cancion) =>
-          cancion.nombre.toLowerCase().includes(input.toLowerCase())
+        const filtradas = respuesta.canciones.filter(
+          (cancion) =>
+            cancion.nombre.toLowerCase().includes(input.toLowerCase())
         );
         setCancionesFiltradas(filtradas);
       } else {
@@ -57,22 +57,18 @@ function Search() {
             onChange={onChange}
           />
         </div>
-      </header>
+        </header>
 
-      <div id="music-container">
-        {cancionesFiltradas.map((item, index) => {
-          console.log(item.imagen)
-          return (
-            <div id="track-container" key={index}>
-                <img id="foto" src={`../src/assets/cupido-img/${item.imagen}.png`} alt={`Foto de ${item.imagen}`} />
-              <div id="artist-and-name">
-                <div id="artist">{item.artista}</div>
-                <div id="song-name">{item.nombre}</div>
-              </div>
-            </div>
-          );
-        })}
-      </div>
+        <div id="music-container">
+      {cancionesFiltradas.map((item, index) => {
+        return (
+          <div key={index}>
+            <div>{item.nombre}</div>
+            <div>{item.artista}</div>
+          </div>
+        );
+      })}
+        </div>
     </>
   );
 }

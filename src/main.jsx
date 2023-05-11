@@ -37,14 +37,6 @@ const router = createBrowserRouter([
     element: <Signin2 />,
   },
   {
-    path: "/profile",
-    element: <Profile />,
-  },
-  {
-    path: "/playlist",
-    element: <Playlists />,
-  },
-  {
     path: "/profile-config",
     element: <ProfileConfig />,
   },
@@ -63,6 +55,10 @@ const router = createBrowserRouter([
       {
         path: "search",
         element: <Search />,
+      },
+      {
+        path: "profile",
+        element: <Profile />,
       },
     ],
   },
