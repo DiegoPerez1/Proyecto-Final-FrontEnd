@@ -1,63 +1,66 @@
-#container{
-width: 418px;
-height: 792px;
-background: #FDFEFF;
+#container {
+  width: 418px;
+  height: 792px;
+  background: #fdfeff;
 }
-#top-gradient{
-height: 160px;
-width: 418px;
-background: linear-gradient(180deg, rgba(253, 254, 255, 0) 25%, rgba(255, 142, 10, 0.534586) 75%, rgba(255, 142, 10, 0.9) 100%);
-opacity: 0.25;
-transform: rotate(-180deg);
+#top-gradient {
+  height: 160px;
+  width: 418px;
+  background: linear-gradient(
+    180deg,
+    rgba(253, 254, 255, 0) 25%,
+    rgba(255, 142, 10, 0.534586) 75%,
+    rgba(255, 142, 10, 0.9) 100%
+  );
+  opacity: 0.25;
+  transform: rotate(-180deg);
 }
-#title{
+#title {
   position: absolute;
-  top:48px;
-left: 30px;
+  top: 30px;
+  left: 35px;
 }
-#icon{
+#icon {
   position: absolute;
   top: 6.5rem;
-  left: 45px;
-width: 19.74px;
-height: 19.74px;
-z-index: 1;
-
+  left: 55px;
+  width: 19.74px;
+  height: 19.74px;
+  z-index: 1;
 }
-#search-input{
+#search-input {
   box-sizing: border-box;
-position: absolute;
-top: 90px;
-left: 30px;
-width: 320px;
-height: 48px;
-border: 2px solid #BFC0C1;
-border-radius: 0px 16px;
-padding-left: 56px;
+  position: absolute;
+  top: 90px;
+  left: 35px;
+  width: 320px;
+  height: 48px;
+  border: 2px solid #bfc0c1;
+  border-radius: 0px 16px;
+  padding-left: 56px;
 }
 #music-container {
   display: flex;
   flex-direction: column;
   gap: 5px;
-padding: 10px 20px ;
+  padding: 10px 20px;
   height: auto;
   max-height: 500px; /* Establece la altura máxima para que se active el scroll */
-  width: 312px;
+  width: 320px;
   border: 2px solid black;
   position: absolute;
   top: 200px;
   left: 35px;
   overflow-y: scroll;
 }
-#track-container{
+#track-container {
   display: flex;
-  
 }
-#foto{
+#foto {
   width: 48px;
-height: 48px;
+  height: 48px;
 }
-#artist-and-name{
+#artist-and-name {
   display: flex;
   flex-direction: column;
 
@@ -66,18 +69,18 @@ height: 48px;
   width: 200px;
 }
 #artist,
-#song-name{
-  font-family: 'Rubik';
-font-style: normal;
-font-weight: 500;
-font-size: 14px;
-line-height: 21px;
-letter-spacing: 0.5px;
-color: #26262E;
+#song-name {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: 0.5px;
+  color: #26262e;
 }
-#song-name{
-font-weight: 400;
-font-size: 12px;
-line-height: 18px;
-color: #838486;
+#song-name {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: #838486;
 }

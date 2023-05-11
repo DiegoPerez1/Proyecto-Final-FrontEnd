@@ -1,6 +1,6 @@
 #container {
   position: relative;
-  width: 368px;
+  width: 418px;
   height: 792px;
   background: #fdfeff;
 }
@@ -21,8 +21,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
-  gap: 5rem;
+  gap: 9rem;
   position: absolute;
   width: 320px;
   height: 36px;
@@ -54,7 +53,7 @@
   align-items: flex-start;
   padding: 0px;
   gap: 12px;
- 
+  padding-left: 6px;
 }
 .item {
   display: flex;

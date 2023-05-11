@@ -48,6 +48,7 @@ function Login() {
 
   return (
     <div className="ContainerLogIn">
+      <div id="top-gradient"></div>
       <section className="headerLogIn">
         <Link to="/">
           {" "}

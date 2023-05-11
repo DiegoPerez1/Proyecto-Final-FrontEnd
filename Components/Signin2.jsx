@@ -49,6 +49,7 @@ function Signin2() {
 
   return (
     <div className="containerSignIn">
+      <div id="top-gradient"></div>
       <section >
         <section>
           <Link to='/signin'>  <img src={leftArrow} alt="" className='arrowSignIn' /></Link>

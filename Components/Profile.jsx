@@ -30,10 +30,10 @@ export default function Profile() {
         <h3 id="name">Mara Perez</h3>
         <p id="user">@mara_pg</p>
       </section>
-      <section id="buttonSectionProfile">
-        <h5 id="my-playlist">Mis playlist</h5>
+      <section id="titleAndBtn">
+        <h4 id="mis-playlist">Mis playlist</h4>
         <div id="line"></div>
-        <button id="create-playlist">Crear playlist</button>
+        <button id="crear-playlist">Crear playlist</button>
       </section>
       <section className="playlist-section">
         <ul className="playlistProfile">

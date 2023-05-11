@@ -7,16 +7,16 @@ import { Link, Outlet } from "react-router-dom";
 
 function Navbar() {
   return (
-    <div className="container">
+    <div className="container-nav">
       <div>
         <Outlet />
       </div>
       <nav id="nav-container">
-        <ul id="list-container">
-          <Link to="/nav/home"><li> <img src={homeActive} /> Inicio</li></Link>
-          <Link to="/nav/search"><li> <img src={searchActive} /> Buscador</li></Link>
-          <Link to="/nav/profile"><li> <img src={profileActive} /> Perfil</li></Link>
-          <li> <img src={friendsActive} /> Amigos</li>
+      <ul id="list-container">
+          <li className="item-nav"><Link to="/nav/home" className="nav-link"><img src={homeActive}/><p>Inicio</p> </Link></li>
+          <li className="item-nav"><Link to="/nav/search" className="nav-link"><img src={searchActive} /><p>Buscador</p> </Link></li>
+          <li className="item-nav"><Link to="/nav/profile" className="nav-link"><img src={profileActive} /><p>Perfil</p> </Link></li>
+          <li className="item-nav"><img src={friendsActive} /><p>Amigos</p></li>
         </ul>
       </nav>
     </div>

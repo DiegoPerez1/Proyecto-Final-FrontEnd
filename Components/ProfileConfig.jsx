@@ -2,7 +2,7 @@ import React from "react";
 import "../Styles/ProfileConfig.css";
 import { Link } from "react-router-dom";
 import leftArrow from "../src/assets/Vector.svg";
-import line from "../src/assets/largedivider.svg";
+
 function ProfileConfig() {
   return (
     <div id="config-container ">
@@ -10,7 +10,7 @@ function ProfileConfig() {
       <header id="header-container">
         <div id="arrow-left">
           <Link to="/nav/profile">
-            <img src={leftArrow} alt="" className="arrowConfig" />
+            <img src={leftArrow}className="arrowConfig" />
           </Link>
         </div>
         <div className="config-title">
