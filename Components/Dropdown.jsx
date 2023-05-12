@@ -69,16 +69,12 @@ const customStyles = {
 
 function Dropdown(props) {
     const { titulo, placeholder } = props;
-    const [selectedOption, setSelectedOption] = useState(null);
 
-    const handleSelectOption = (option) => {
-        setSelectedOption(option);
-    };
 
     return (
         <div id='contenedorInput'>
             <h1>{titulo}</h1>
-            <Select options={options} styles={customStyles} placeholder={placeholder} onChange={handleSelectOption} />
+            <Select options={options} styles={customStyles} placeholder={placeholder} />
         </div>
     );
 }
