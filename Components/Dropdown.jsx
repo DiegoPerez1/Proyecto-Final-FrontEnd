@@ -4,6 +4,7 @@ import Select from 'react-select';
 import "../Styles/Dropdown.css";
 
 
+
 const options = [
     { value: "", label: "Actividad" },
     { value: "opcion1", label: "Ejercicio Físico" },

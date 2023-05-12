@@ -63,7 +63,7 @@ const router = createBrowserRouter([
     ],
   },
   {
-    path: "/cupido",
+    path: "/cupido-musical",
     element: <CupidoMusical />,
   },
   {
