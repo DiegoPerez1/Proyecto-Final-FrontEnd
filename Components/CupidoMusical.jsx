@@ -16,9 +16,9 @@ import Brian from "../src/assets/cupido-img/Brian.png";
 import Beegees from "../src/assets/cupido-img/Beegees.png";
 
 function CupidoMusical() {
-  const [artistas, setArtistas] = useState([]);       //almacena la lista de artistas
-  const [currentArtist, setCurrentArtist] = useState([0]);  //artista actual que se muestra en pantalla
-  const [artistasSelect, setArtistasSelect] = useState([]);  //almacena artistas seleccionados por el usuario en una lista
+  const [artistas, setArtistas] = useState([]); //almacena la lista de artistas
+  const [currentArtist, setCurrentArtist] = useState(null); //artista actual que se muestra en pantalla
+  const [artistasSelect, setArtistasSelect] = useState([]); //almacena artistas seleccionados por el usuario en una lista
   const [playlistCreated, setPlaylistCreated] = useState(false);
   const [token, setToken] = useState("");
 
@@ -26,20 +26,34 @@ function CupidoMusical() {
     // se realiza una solicitud GET a /api/artistas para obtener una lista de artistas desde el servidor.
     // Luego, se actualiza el estado artistas con los datos obtenidos y se establece el primer artista como currentArtist.
     const fetchArtistas = async () => {
-      const response = await fetch("/api/artistas", { method: "GET" });
-      if (response.ok) {
-        const data = await response.json();
-        console.log(data);
-        setArtistas(data);
-        if (data.length > 0) {
-          setCurrentArtist(data[0]);
+      var myHeaders = new Headers();
+      myHeaders.append("Authorization", localStorage.getItem("token"));
+      myHeaders.append("Content-Type", "application/json");
+  
+      var requestOptions = {
+        method: "GET",
+        headers: myHeaders,
+        redirect: "follow",
+      };
+      try {
+        const response = await fetch("http://localhost:3000/api/artistas", requestOptions);
+        if (response.ok) {
+          const data = await response.json();
+          setArtistas(data);
+          if (data.length > 0) {
+            setCurrentArtist(data[0]);
+          }
         }
+      } catch (error) {
+        console.error(error);
       }
     };
     fetchArtistas();
   }, []);
+
+
   const onClickLike = () => {
-    // Actualiza el estado currentArtist para mostrar el siguiente artista de la lista 
+    // Actualiza el estado currentArtist para mostrar el siguiente artista de la lista
     // y agrega el artista actual a la lista de artistasSelect.
     const currentIndex = artistas.indexOf(currentArtist);
     const nextIndex = (currentIndex + 1) % artistas.length;
@@ -47,48 +61,54 @@ function CupidoMusical() {
     setCurrentArtist(nextArtist);
     setArtistasSelect([...artistasSelect, nextArtist]);
   };
-  
+  console.log(artistasSelect);
+
   const onClickPass = () => {
-    // deseleccionar un artista
+    const currentIndex = artistas.indexOf(currentArtist);
+    const nextIndex = (currentIndex + 1) % artistas.length;
+    const nextArtist = artistas[nextIndex];
+
+    if (nextArtist !== currentArtist) {
+      setCurrentArtist(nextArtist);
+    }
   };
 
-  const onClickCrearPlaylist = async () => {
-    if (artistasSelect.length < 2) {
-      alert("Debe seleccionar al menos dos artistas para crear la lista de reproducción");
-      return;
-    }
-  
-    try {
-      const response = await fetch(`http://localhost:3000/api/cupidoMusical`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `${token}`,
-        },
-        body: JSON.stringify({ artistas: artistasSelect }),
-      });
-      if (!response.ok) {
-        throw new Error("Error en la respuesta del servidor");
-      }
-      const data = await response.json();
-      console.log(data);
-      setPlaylistCreated(true);
-    } catch (error) {
-      console.error(error);
-    }
+  const onClickCrearPlaylist= () => {
+    const token = localStorage.getItem("token");
+
+    fetch(`http://localhost:3000/api/cupidoMusical`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `${token}`,
+      },
+      body: JSON.stringify({ artistas: artistasSelect }),
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Error en la respuesta del servidor");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        setPlaylistCreated(true);
+      })
+      .catch((error) => console.error(error));
   };
-  
-    
-    return (
-      <div id="container">
+ 
+  return (
+    <div id="container">
       <div id="top-gradient"></div>
       <header id="header">
         <img src={Vector} alt="icono de flecha" />
         <p id="cupido-title">Cupido Musical</p>
       </header>
       <main>
-      <img id="img-artist" src={`../src/assets/cupido-img/${currentArtist?.imagen}.png`} />
-      <p id="nombre-artista">{currentArtist?.nombre}</p>
+        <img
+          id="img-artist"
+          src={`../src/assets/cupido-img/${currentArtist?.imagen}.png`}
+        />
+        <p id="nombre-artista">{currentArtist?.nombre}</p>
         <section id="both-icons">
           <button className="icon-btn" onClick={onClickLike}>
             <img src={like} alt="icono de corazón" />
