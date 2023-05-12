@@ -7,17 +7,7 @@ import vector from "../src/assets/vectorabajo.svg"
 
 
 function MusicaContextual() {
-    const [selectedOption1, setSelectedOption1] = useState("");
     const [isEstiloElectronica, setIsEstiloElectronica] = useState(false);
-    const [isDropdownSelected, setIsDropdownSelected] = useState(false);
-
-    useEffect(() => {
-        if (selectedOption1 !== "") {
-            setIsDropdownSelected(true);
-        } else {
-            setIsDropdownSelected(false);
-        }
-    }, [selectedOption1]);
 
 
     const cambiarEstilo = () => {

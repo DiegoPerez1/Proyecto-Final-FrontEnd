@@ -69,9 +69,11 @@ const customStyles = {
 function Dropdown(props) {
     const { titulo, placeholder } = props;
     const [selectedOption, setSelectedOption] = useState(null);
+    const [disabled, setDisabled] = useState(true);
 
     const handleSelectOption = (option) => {
         setSelectedOption(option);
+        setDisabled(option === null);
     };
 
     return (
