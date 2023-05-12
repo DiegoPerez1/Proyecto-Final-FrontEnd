@@ -10,11 +10,6 @@ function MusicaContextual() {
     const [isEstiloElectronica, setIsEstiloElectronica] = useState(false);
 
 
-    const cambiarEstilo = () => {
-        setIsEstiloElectronica(!isEstiloElectronica);
-    };
-
-
     return (
         <div id='container'>
             <div id="top-gradient"></div>
