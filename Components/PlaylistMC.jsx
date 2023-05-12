@@ -15,7 +15,7 @@ import searchActive from "../src/assets/search-icon-active.svg";
 import profileActive from "../src/assets/profile-icon-active.svg";
 import friendsActive from "../src/assets/friends-icon-active.svg";
 import deadmau5 from "../src/assets/cupido-img/Deadmau5.png";
-
+import "../Styles/Navbar.css";
 
 function PlaylistMC() {
     return (
@@ -124,62 +124,14 @@ function PlaylistMC() {
                         <img src={tresPuntos} id="puntoslista"></img>
                     </li>
                 </ul>
-                {/* <ul className='listaFotos'>
-                    <li id="puntosFotos">
-                        <img src={deadmau5} id="fotocancion" />
-                        <h5> </h5>
-                        <img src={tresPuntos} id="puntoslista"></img>
-                    </li>
-                </ul>
-                <ul className='listaFotos'>
-                    <li id="puntosFotos">
-                        <img src={deadmau5} id="fotocancion" />
-                        <h5> Nombre cancion </h5>
-                        <img src={tresPuntos} id="puntoslista"></img>
-                    </li>
-                </ul>
-                <ul className='listaFotos'>
-                    <li id="puntosFotos">
-                        <img src={deadmau5} id="fotocancion" />
-                        <h5> Nombre cancion </h5>
-                        <img src={tresPuntos} id="puntoslista"></img>
-                    </li>
-                </ul>
-                <ul className='listaFotos'>
-                    <li id="puntosFotos">
-                        <img src={deadmau5} id="fotocancion" />
-                        <h5> Nombre cancion </h5>
-                        <img src={tresPuntos} id="puntoslista"></img>
-                    </li>
-                </ul>
-                <ul className='listaFotos'>
-                    <li id="puntosFotos">
-                        <img src={deadmau5} id="fotocancion" />
-                        <h5> Nombre cancion </h5>
-                        <img src={tresPuntos} id="puntoslista"></img>
-                    </li>
-                </ul>
-                <ul className='listaFotos'>
-                    <li id="puntosFotos">
-                        <img src={deadmau5} id="fotocancion" />
-                        <h5> Nombre cancion </h5>
-                        <img src={tresPuntos} id="puntoslista"></img>
-                    </li>
-                </ul>
-                <ul className='listaFotos'>
-                    <li id="puntosFotos">
-                        <img src={deadmau5} id="fotocancion" />
-                        <h5> Nombre cancion </h5>
-                        <img src={tresPuntos} id="puntoslista"></img>
-                    </li>
-                </ul> */}
+
             </div>
             <nav id="nav-container">
                 <ul id="list-container">
-                    <Link to="/nav/home"><li> <img src={homeActive} /> Inicio</li></Link>
-                    <Link to="/nav/search"><li> <img src={searchActive} /> Buscador</li></Link>
-                    <Link to="/profile"><li> <img src={profileActive} /> Perfil</li></Link>
-                    <li> <img src={friendsActive} /> Amigos</li>
+                    <li className="item-nav"><Link to="/nav/home" className="nav-link"><img src={homeActive} /><p>Inicio</p> </Link></li>
+                    <li className="item-nav"><Link to="/nav/search" className="nav-link"><img src={searchActive} /><p>Buscador</p> </Link></li>
+                    <li className="item-nav"><Link to="/nav/profile" className="nav-link"><img src={profileActive} /><p>Perfil</p> </Link></li>
+                    <li className="item-nav"><img src={friendsActive} /><p>Amigos</p></li>
                 </ul>
             </nav>
         </div>

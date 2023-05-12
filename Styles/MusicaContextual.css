@@ -34,8 +34,36 @@
     padding-top: 25px;
 }
 
+#contenedorAnimo,
+#contenedorClima {
+    margin-top: 20px;
+}
+
+#estadoDeAnimo,
+#clima {
+    margin-left: 55px;
+    height: 40px;
+    width: 300px;
+    background-color: white;
+    margin-bottom: 10px;
+    pointer-events: none;
+}
+
+h7 {
+    color: lightgrey;
+    display: flex;
+    margin-left: 10px;
+}
+
+#vector {
+    display: flex;
+    position: absolute;
+    left: 10%;
+
+}
+
 .generos {
-    margin-left: 30px;
+    margin-left: 45px;
 }
 
 #contenedorGeneros {
@@ -52,10 +80,21 @@
 
 .crearPlaylist {
     margin-top: 35px;
-    margin-left: 30px;
+    margin-left: 55px;
     border-color: rgb(218, 218, 218);
     background-color: rgb(218, 218, 218);
     color: white;
+    width: 300px;
+}
+
+.crearPlaylistEnabled {
+    background-color: orange;
+    color: white;
+    border-color: white;
+    margin-top: 35px;
+    margin-left: 55px;
+    width: 300px;
+    cursor: pointer;
 }
 
 .selected {
@@ -106,12 +145,4 @@
     cursor: pointer;
     background-color: black;
     color: white;
-}
-
-.crearPlaylistEnabled {
-    background-color: orange;
-    color: white;
-    border-color: white;
-    margin-top: 35px;
-    margin-left: 30px;
 }

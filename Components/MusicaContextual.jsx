@@ -1,58 +1,24 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import "../Styles/MusicaContextual.css"
 import leftArrow from "../src/assets/Vector.svg";
 import { Link } from "react-router-dom";
 import Dropdown from "./Dropdown.jsx";
+import vector from "../src/assets/vectorabajo.svg"
 
 
 function MusicaContextual() {
     const [selectedOption1, setSelectedOption1] = useState("");
-    const [selectedOption2, setSelectedOption2] = useState("");
-    const [selectedOption3, setSelectedOption3] = useState("");
     const [isEstiloElectronica, setIsEstiloElectronica] = useState(false);
+    const [isDropdownSelected, setIsDropdownSelected] = useState(false);
 
+    useEffect(() => {
+        if (selectedOption1 !== "") {
+            setIsDropdownSelected(true);
+        } else {
+            setIsDropdownSelected(false);
+        }
+    }, [selectedOption1]);
 
-    const handleChange1 = (event) => {
-        setSelectedOption1(event.target.value);
-        setIsOptionSelected(true);
-    };
-
-    const handleChange2 = (event) => {
-        setSelectedOption2(event.target.value);
-    }
-    const handleChange3 = (event) => {
-        setSelectedOption3(event.target.value);
-    };
-
-    const options1 = {
-        label: "¿Cuál es la ocasión?",
-        choices: [
-            { value: "", label: "Actividad" },
-            { value: "opcion1", label: "Ejercicio Físico" },
-            { value: "opcion2", label: "Limpieza" },
-            { value: "opcion3", label: "Celebración" },
-            { value: "opcion4", label: "Dormir" },
-            { value: "opcion5", label: "Meditar" },
-            { value: "opcion6", label: "Social" },
-            { value: "opcion7", label: "Estudiar" },
-            { value: "opcion8", label: "Relajación" },
-            { value: "opcion9", label: "Viajando" },
-        ],
-    };
-
-    const options2 = {
-        label: "¿Cómo te sientes?",
-        choices: [
-            { value: "", label: "Estado de ánimo" },
-        ],
-    };
-
-    const options3 = {
-        label: "¿Cómo está el clima?",
-        choices: [
-            { value: "", label: "Clima" },
-        ],
-    };
 
     const cambiarEstilo = () => {
         setIsEstiloElectronica(!isEstiloElectronica);
@@ -67,9 +33,21 @@ function MusicaContextual() {
                 Música Contextual
             </div>
             <div id="contenedorDropdowns">
-                <Dropdown selectedOption={selectedOption1} handleChange={handleChange1} options={options1} />
-                <Dropdown selectedOption={selectedOption2} handleChange={handleChange2} options={options2} />
-                <Dropdown selectedOption={selectedOption3} handleChange={handleChange3} options={options3} />
+                <Dropdown titulo={"¿Cuál es la ocasión?"} placeholder={"Actividad"} />
+                <div id='contenedorAnimo'>
+                    <h1> ¿Cómo te sientes? </h1>
+                    <button id='estadoDeAnimo'>
+                        <h7>Estado de Ánimo</h7>
+                        {/* <img id='vector' src={vector}></img> */}
+                    </button>
+                </div>
+                <div id='contenedorClima'>
+                    <h1> ¿Cómo está el clima? </h1>
+                    <button id='clima'>
+                        <h7>Clima</h7>
+                        {/* <img id='vector' src={vector}></img> */}
+                    </button>
+                </div>
             </div>
             <div id='contenedorGeneros'>
                 <p id='tituloGeneros'>Selecciona hasta 3 géneros:</p>

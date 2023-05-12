@@ -6,11 +6,12 @@
     z-index: 10;
 }
 
-label {
+h1 {
     font-size: 20px;
     text-align: center;
     padding-bottom: 10px;
     z-index: 10;
+    margin-bottom: 10px;
 }
 
 select {
@@ -24,6 +25,12 @@ select {
     z-index: 10;
     overflow-y: scroll;
     color: grey;
+}
+
+option {
+    background-color: white;
+    color: black;
+    font-size: 90px;
 }
 
 #vector {
