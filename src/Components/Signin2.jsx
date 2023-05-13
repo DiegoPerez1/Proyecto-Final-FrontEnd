@@ -1,5 +1,5 @@
 import "../Styles/Signin2.css";
-import  useState from "react";
+import  {useState} from "react";
 import { Link, useNavigate } from "react-router-dom";
 import leftArrow from "../assets/Vector.svg";
 
