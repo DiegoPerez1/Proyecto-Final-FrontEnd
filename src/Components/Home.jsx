@@ -22,7 +22,7 @@ function Home() {
           <li className="item">
             <img className="img-playlist" src={cupido} />
             <div className="text">
-            <Link to="/cupido-musical"><h4 className="title">Cupido Músical</h4></Link>
+            <Link to="/cupidomusical"><h4 className="title">Cupido Músical</h4></Link>
               <p className="details">Tus artistas favoritos nunca van a dejarte con el corazón roto.</p>
             </div>
           </li>

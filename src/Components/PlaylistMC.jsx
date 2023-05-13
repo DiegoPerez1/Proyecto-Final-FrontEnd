@@ -13,7 +13,7 @@ import homeActive from "../assets/home-icon-active.svg";
 import searchActive from "../assets/search-icon-active.svg";
 import profileActive from "../assets/profile-icon-active.svg";
 import friendsActive from "../assets/friends-icon-active.svg";
-import deadmau5 from "../assets/cupido-img/Deadmau5.png";
+import deadmau5 from "/Deadmau5.png";
 
 
 function PlaylistMC() {
