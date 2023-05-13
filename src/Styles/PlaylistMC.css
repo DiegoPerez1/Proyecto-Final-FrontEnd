@@ -1,0 +1,195 @@
+#top-gradient {
+    position: absolute;
+    height: 160px;
+    width: 418px;
+    background: linear-gradient(180deg,
+            rgba(253, 254, 255, 0) 25%,
+            rgba(255, 142, 10, 0.534586) 75%,
+            rgba(255, 142, 10, 0.9) 100%);
+    opacity: 0.25;
+    transform: rotate(-180deg);
+    z-index: 0;
+}
+
+#headerMC {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    padding-top: 25px;
+}
+
+.arrowMC {
+    position: absolute;
+    left: 5%;
+    top: 40%;
+    cursor: pointer;
+    height: 20px;
+}
+
+#trespuntos {
+    height: 25px;
+    position: absolute;
+    left: 90%;
+
+}
+
+#tituloheader1 {
+    font-size: 12px;
+    margin-bottom: 6px;
+    letter-spacing: 1px;
+
+}
+
+#tituloheader2 {
+    font-size: 16px;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+#divfotosalbum {
+    height: 200px;
+    width: 200px;
+    margin: 0 auto;
+}
+
+#fotogrande {
+    height: 200px;
+    width: 200px;
+    margin: 0 auto;
+    border: 2px solid black;
+    border-radius: 0px 16px;
+}
+
+#logosyduracion {
+    height: 35px;
+    width: 100%;
+    margin: 10px;
+    padding: 4px;
+    display: flex;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+#placeholder {
+    height: 40px;
+    margin-left: 5px;
+}
+
+#verified {
+    height: 15px;
+    margin-top: 13px;
+    margin-left: -5px;
+}
+
+#share {
+    height: 50px;
+    margin-top: 8px;
+
+}
+
+#history-icon {
+    position: absolute;
+    left: 90%;
+    margin-top: 9px;
+}
+
+#duracion-playlist {
+    position: absolute;
+    left: 75%;
+    font-size: 14px;
+    margin-top: 9px
+}
+
+#crearcopiayplay {
+    height: 70px;
+    width: 100%;
+    margin: 10px;
+    margin-top: 15px;
+    padding: 4px;
+    display: flex;
+    gap: 8px;
+}
+
+#copy-icon {
+    height: 25px;
+    margin-left: 25px;
+    margin-top: 20px;
+}
+
+#crearcopia {
+
+    font-size: 16px;
+    margin-left: 10px;
+    margin-top: 23px;
+}
+
+#shuffle-icon {
+    position: absolute;
+    left: 72%;
+    height: 30px;
+    margin-top: 13px;
+}
+
+#play-icon {
+    position: absolute;
+    left: 83.5%;
+    height: 50px;
+    top: 43%;
+    color: rgba(234, 156, 10, 0.856);
+    cursor: pointer;
+}
+
+#listacanciones {
+    height: 320px;
+    width: 100%;
+    margin: 10px;
+    overflow-y: scroll;
+}
+
+.listaFotos {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 60px;
+    /* margin-top: -15px; */
+    margin-left: 5px;
+}
+
+#puntosFotos {
+    display: flex;
+    align-items: center;
+}
+
+#fotocancion {
+    margin-left: 10px;
+    height: 68px;
+    padding: 10px;
+}
+
+h5 {
+    font-size: 15px;
+    margin-left: 10px;
+    margin-top: -25px;
+    width: 300px;
+    font-weight: bold;
+}
+
+#puntoslista {
+    margin-left: 120px;
+    margin-right: 20px;
+    height: 25px;
+    margin-top: -10px;
+    width: fit-content;
+}
+
+h6 {
+    margin-left: -185px;
+    margin-top: 25px;
+    font-size: 12px;
+    width: 200px;
+    color: grey;
+}

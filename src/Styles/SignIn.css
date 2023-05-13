@@ -1,0 +1,101 @@
+.containerSignIn {
+    margin: 0%;
+    padding: 0%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(360deg, rgba(253, 254, 255, 0) 40%, rgba(255, 141, 10, 0.288) 95%, rgba(255, 141, 10, 0.363) 100%);
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.arrow {
+    position: absolute;
+    left: 5%;
+    padding-top: 3rem;
+    cursor: pointer;
+}
+
+.headerText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3rem;
+    font-size: 20px;
+    color: #26262E;
+}
+
+.buttonSignin {
+    width: 320px;
+    height: 48px;
+    left: 22px;
+    background: #E4E6E8;
+    border-radius: 0px 16px;
+    cursor: pointer;
+}
+
+.titleSectionSignin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 7rem;
+}
+
+.formSectionSignin {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3rem;
+    gap: 2rem;
+    text-align: start;
+}
+
+.buttonSectionSignin {
+    margin-top: 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.emailLabel {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: 0.5px;
+}
+
+.inputSingiin {
+    outline-color: #ff8e0a;
+    border: 2px solid #E4E6E8;
+    border-radius: 0px 16px;
+    box-sizing: border-box;
+    width: 320px;
+    height: 48px;
+    display: flex;
+    padding: 0px 16px;
+
+}
+
+
+
+.buttonSignin {
+    width: 320px;
+    height: 48px;
+    left: 22px;
+    top: 416px;
+    background-color: #ff8e0a;
+    color: white;
+    border-radius: 0px 16px;
+    border: none;
+}
+
+.confirmationLogIn {
+    color: #838486;
+    font-size: 12px;
+}

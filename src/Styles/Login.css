@@ -1,0 +1,104 @@
+.ContainerLogIn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0%;
+  padding: 0%;
+  width: 100%;
+  height: 100%;
+}
+
+.inputLogIn {
+  outline-color: #ff8e0a;
+  border: 2px solid #E4E6E8;
+  border-radius: 0px 16px;
+  box-sizing: border-box;
+  width: 320px;
+  height: 48px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 16px;
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+.arrowLogIn {
+  position: absolute;
+  left: 5%;
+  cursor: pointer;
+}
+
+.headerLogIn {
+  display: flex;
+  justify-content: center;
+  padding-top: 3rem;
+  font-size: 20px;
+}
+
+
+.buttonLogIn {
+  width: 320px;
+  height: 48px;
+  left: 22px;
+  top: 416px;
+  background: #e4e6e8;
+  border-radius: 0px 16px;
+  border: none;
+}
+
+.buttonSectionLogIn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 4rem;
+  gap: 2rem;
+}
+
+.titleSectionLogIn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.formSectionLogIn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4rem;
+  font-size: 20px;
+  gap: 0.6rem;
+}
+
+.passwordSectionLogin {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.olvidasteTuContraseña {
+  color: #26262E;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+}
+
+button.activo {
+  background-color: #ff8e0a;
+  color: white;
+  border: 2px solid #E4E6E8;
+}
+
+button.inactivo {
+  background-color: #E4E6E8;
+  border: 2px solid #E4E6E8;
+  cursor: not-allowed;
+}

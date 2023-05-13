@@ -1,0 +1,148 @@
+#container {
+    position: relative;
+    width: 418px;
+    height: 844px;
+    background: #fdfeff;
+}
+
+#top-gradient {
+    position: absolute;
+    height: 10px;
+    width: 418px;
+    background: linear-gradient(180deg,
+            rgba(253, 254, 255, 0) 25%,
+            rgba(255, 142, 10, 0.534586) 75%,
+            rgba(255, 142, 10, 0.9) 100%);
+    opacity: 0.25;
+    transform: rotate(-180deg);
+    z-index: 0;
+}
+
+.arrowMC {
+    position: absolute;
+    left: 5%;
+    top: 60%;
+    cursor: pointer;
+    height: 40%;
+}
+
+#headerMC {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    margin-bottom: 25px;
+    padding-top: 25px;
+}
+
+#contenedorAnimo,
+#contenedorClima {
+    margin-top: 20px;
+}
+
+#estadoDeAnimo,
+#clima {
+    margin-left: 55px;
+    height: 40px;
+    width: 300px;
+    background-color: white;
+    margin-bottom: 10px;
+    pointer-events: none;
+}
+
+h7 {
+    color: lightgrey;
+    display: flex;
+    margin-left: 10px;
+}
+
+#vector {
+    display: flex;
+    position: absolute;
+    left: 10%;
+
+}
+
+.generos {
+    margin-left: 45px;
+}
+
+#contenedorGeneros {
+    margin: 0 auto;
+    margin-bottom: 5px;
+}
+
+#tituloGeneros {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 15px;
+    margin-top: 35px;
+}
+
+.crearPlaylist {
+    margin-top: 35px;
+    margin-left: 55px;
+    border-color: rgb(218, 218, 218);
+    background-color: rgb(218, 218, 218);
+    color: white;
+    width: 300px;
+}
+
+.crearPlaylistEnabled {
+    background-color: orange;
+    color: white;
+    border-color: white;
+    margin-top: 35px;
+    margin-left: 55px;
+    width: 300px;
+    cursor: pointer;
+}
+
+.selected {
+    background-color: black;
+    color: white;
+    height: fit-content;
+    width: fit-content;
+    padding: 5px;
+    /* justify-content: space-around; */
+    margin: 8px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.selected2 {
+    margin: 10px 25px;
+    background-color: orange;
+    color: white;
+}
+
+.genero1 {
+    pointer-events: none;
+    height: fit-content;
+    width: fit-content;
+    padding: 5px;
+    margin: 8px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.electronica1 {
+    height: fit-content;
+    width: fit-content;
+    padding: 5px;
+    /* justify-content: space-around; */
+    margin: 8px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.electronica2 {
+    height: fit-content;
+    width: fit-content;
+    padding: 5px;
+    /* justify-content: space-around; */
+    margin: 8px;
+    font-size: 12px;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+}
