@@ -1,9 +1,9 @@
 import "../Styles/Home.css";
-import historyIcon from "../src/assets/history.svg";
-import notificationIcon from "../src/assets/notification.svg";
-import cupido from "../src/assets/cupido.svg";
-import contextual from "../src/assets/contextual.svg";
 import { Link } from "react-router-dom";
+import historyIcon from "../assets/history.svg";
+import notificationIcon from "../assets/notification.svg";
+import cupido from "../assets/cupido.svg";
+import contextual from "../assets/contextual.svg";
 
 function Home() {
   return (

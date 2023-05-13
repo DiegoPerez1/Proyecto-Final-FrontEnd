@@ -1,7 +1,7 @@
-import React, { Component, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import leftArrow from "../src/assets/Vector.svg";
 import "../Styles/Signin2.css";
+import  useState from "react";
+import { Link, useNavigate } from "react-router-dom";
+import leftArrow from "../assets/Vector.svg";
 
 function Signin2() {
   const [nombre, setNombre] = useState("");

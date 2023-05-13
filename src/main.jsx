@@ -1,23 +1,23 @@
 
-import React from 'react'
+import './Styles/index.css' 
+import React from 'react';
 import ReactDOM from 'react-dom/client'
 import { createBrowserRouter } from 'react-router-dom';
 import { RouterProvider } from 'react-router-dom';
-import '../Styles/index.css'
-import Start from '../Components/Start.jsx';
-import SignIn from '../Components/SignIn.jsx';
-import Navbar from '../Components/NavBar';
-import Home from '../Components/Home';
-import Search from '../Components/Search';
-import LogIn from '../Components/LogIn';
-import Signin2 from '../Components/Signin2';
-import CupidoMusical from '../Components/CupidoMusical';
-import MusicaContextual from '../Components/MusicaContextual';
-import PlaylistMC from '../Components/PlaylistMC';
-import Profile from '../Components/Profile';
-import ProfileConfig from '../Components/ProfileConfig';
-import Playlists from '../Components/Playlists';
-import CreatePlaylist from '../Components/CreatePlaylist';
+import Start from './Components/Start.jsx';
+import SignIn from './Components/SignIn.jsx';
+import Navbar from './Components/NavBar';
+import Home from './Components/Home';
+import Search from './Components/Search';
+import LogIn from './Components/LogIn';
+import Signin2 from './Components/Signin2';
+import CupidoMusical from './Components/CupidoMusical';
+import MusicaContextual from './Components/MusicaContextual';
+import PlaylistMC from './Components/PlaylistMC';
+import Profile from './Components/Profile';
+import ProfileConfig from './Components/ProfileConfig';
+import Playlists from './Components/Playlists';
+import CreatePlaylist from './Components/CreatePlaylist';
 
 const router = createBrowserRouter([
   {
@@ -63,7 +63,7 @@ const router = createBrowserRouter([
     ],
   },
   {
-    path: "/cupido-musical",
+    path: "/cupidomusical",
     element: <CupidoMusical />,
   },
   {

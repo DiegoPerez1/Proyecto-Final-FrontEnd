@@ -1,6 +1,6 @@
-import { useState } from "react";
 import "../Styles/search.css";
-import iconInput from "../src/assets/search-icon-input.svg";
+import { useState } from "react";
+import iconInput from "../assets/search-icon-input.svg";
 
 
 function Search() {
@@ -64,7 +64,7 @@ function Search() {
           console.log(item.imagen)
           return (
             <div id="track-container" key={index}>
-                <img id="foto" src={`../src/assets/cupido-img/${item.imagen}.png`} alt={`Foto de ${item.imagen}`} />
+                <img id="foto" src={`../assets/cupido-img/${item.imagen}.png`} alt={`Foto de ${item.imagen}`} />
               <div id="artist-and-name">
                 <div id="artist">{item.artista}</div>
                 <div id="song-name">{item.nombre}</div>

@@ -1,26 +1,25 @@
-import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
 import "../Styles/CupidoMusical.css";
-import Vector from "../src/assets/Vector.svg";
-import like from "../src/assets/green-heart.svg";
-import pass from "../src/assets/red-cross.svg";
-import Marley from "../src/assets/cupido-img/Marley.png";
-import Ozuna from "../src/assets/cupido-img/Ozuna.png";
-import Justin from "../src/assets/cupido-img/Justin.png";
-import Angeles from "../src/assets/cupido-img/Angeles.png";
-import Queen from "../src/assets/cupido-img/Queen.png";
-import Yanni from "../src/assets/cupido-img/Yanni.png";
-import Kendrick from "../src/assets/cupido-img/Kendrick.png";
-import Deadmau5 from "../src/assets/cupido-img/Deadmau5.png";
-import Brian from "../src/assets/cupido-img/Brian.png";
-import Beegees from "../src/assets/cupido-img/Beegees.png";
+import { useState, useEffect } from "react";
+import Vector from "../assets/Vector.svg";
+import like from "../assets/green-heart.svg";
+import pass from "../assets/red-cross.svg";
+import Marley from "../assets/cupido-img/Marley.png";
+import Ozuna from "../assets/cupido-img/Ozuna.png";
+import Justin from "../assets/cupido-img/Justin.png";
+import Angeles from "../assets/cupido-img/Angeles.png";
+import Queen from "../assets/cupido-img/Queen.png";
+import Yanni from "../assets/cupido-img/Yanni.png";
+import Kendrick from "../assets/cupido-img/Kendrick.png";
+import Deadmau5 from "../assets/cupido-img/Deadmau5.png";
+import Brian from "../assets/cupido-img/Brian.png";
+import Beegees from "../assets/cupido-img/Beegees.png";
 
 function CupidoMusical() {
   const [artistas, setArtistas] = useState([]); //almacena la lista de artistas
-  const [currentArtist, setCurrentArtist] = useState(null); //artista actual que se muestra en pantalla
+  const [currentArtist, setCurrentArtist] = useState([]); //artista actual que se muestra en pantalla
   const [artistasSelect, setArtistasSelect] = useState([]); //almacena artistas seleccionados por el usuario en una lista
   const [playlistCreated, setPlaylistCreated] = useState(false);
-  const [token, setToken] = useState("");
+
 
   useEffect(() => {
     // se realiza una solicitud GET a /api/artistas para obtener una lista de artistas desde el servidor.
@@ -96,6 +95,7 @@ function CupidoMusical() {
       .catch((error) => console.error(error));
   };
  
+  console.log(currentArtist?.imagen)
   return (
     <div id="container">
       <div id="top-gradient"></div>
@@ -104,10 +104,7 @@ function CupidoMusical() {
         <p id="cupido-title">Cupido Musical</p>
       </header>
       <main>
-        <img
-          id="img-artist"
-          src={`../src/assets/cupido-img/${currentArtist?.imagen}.png`}
-        />
+      <img id="img-artist" src={`../assets/cupido-img/${currentArtist.imagen}.png`} alt={`Foto de ${currentArtist.imagen}`} />
         <p id="nombre-artista">{currentArtist?.nombre}</p>
         <section id="both-icons">
           <button className="icon-btn" onClick={onClickLike}>

@@ -1,8 +1,7 @@
-import { Link } from "react-router-dom";
-import leftArrow from "../src/assets/Vector.svg";
 import "../Styles/Login.css";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { useState } from "react";
+import leftArrow from "../assets/Vector.svg";
 
 function Login() {
   const [user, setUser] = useState("");

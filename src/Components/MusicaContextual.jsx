@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from 'react';
 import "../Styles/MusicaContextual.css"
-import leftArrow from "../src/assets/Vector.svg";
+import React, { useState } from 'react';
 import { Link } from "react-router-dom";
+import leftArrow from "../assets/Vector.svg";
 import Dropdown from "./Dropdown.jsx";
-import vector from "../src/assets/vectorabajo.svg"
 
 
 function MusicaContextual() {

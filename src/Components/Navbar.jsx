@@ -1,9 +1,9 @@
 import "../Styles/Navbar.css";
-import homeActive from "../src/assets/home-icon-active.svg"
-import searchActive from "../src/assets/search-icon-active.svg"
-import profileActive from "../src/assets/profile-icon-active.svg"
-import friendsActive from "../src/assets/friends-icon-active.svg"
 import { Link, Outlet } from "react-router-dom";
+import homeActive from "../assets/home-icon-active.svg"
+import searchActive from "../assets/search-icon-active.svg"
+import profileActive from "../assets/profile-icon-active.svg"
+import friendsActive from "../assets/friends-icon-active.svg"
 
 function Navbar() {
   return (
