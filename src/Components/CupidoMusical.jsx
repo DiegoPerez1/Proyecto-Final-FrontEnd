@@ -13,12 +13,8 @@ function CupidoMusical() {
   const [artistasSelect, setArtistasSelect] = useState([]); //almacena artistas seleccionados por el usuario en una lista
   const [playlistCreated, setPlaylistCreated] = useState(false);
   const [cancionesPlaylist, setCancionesPlaylist] = useState([]);
-const navigate= useNavigate()
+  const navigate = useNavigate()
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 3aa8612b7ec3d909011359812789d23629f98ef7
 
   useEffect(() => {
     // se realiza una solicitud GET a /api/artistas para obtener una lista de artistas desde el servidor.
