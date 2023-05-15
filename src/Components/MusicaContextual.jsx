@@ -6,8 +6,40 @@ import Dropdown from "./Dropdown.jsx";
 
 
 function MusicaContextual() {
-    const [isEstiloElectronica, setIsEstiloElectronica] = useState(false);
+    const [selectedOption, setSelectedOption] = useState(null);
+    const [isElectronicaEnabled, setIsElectronicaEnabled] = useState(false);
+    const [isEstiloElectronica, setIsEstiloElectronica] = useState(false)
 
+
+    function handleSelectChange(selectedOption) {
+        setSelectedOption(selectedOption);
+        setIsElectronicaEnabled(selectedOption !== null && selectedOption.value === "opcion1");
+    }
+
+
+    // const handleCreatePlaylist = () => {
+    //     const token = localStorage.getItem("token");
+
+    //     fetch(`/actividades/${actividadId}/lista-reproduccion`, {
+    //         method: "POST",
+    //         headers: {
+    //             "Content-Type": "application/json",
+    //             Authorization: `${token}`,
+    //         },
+    //         body: JSON.stringify({ artistas: artistasSelect }),
+    //     })
+    //         .then((response) => {
+    //             if (!response.ok) {
+    //                 throw new Error("Error en la respuesta del servidor");
+    //             }
+    //             return response.json();
+    //         })
+    //         .then((data) => {
+    //             console.log(data);
+    //             setPlaylistCreated(true);
+    //         })
+    //         .catch((error) => console.error(error));
+    // };
 
     return (
         <div id='container'>
@@ -17,7 +49,7 @@ function MusicaContextual() {
                 Música Contextual
             </div>
             <div id="contenedorDropdowns">
-                <Dropdown titulo={"¿Cuál es la ocasión?"} placeholder={"Actividad"} />
+                <Dropdown titulo={"¿Cuál es la ocasión?"} placeholder={"Actividad"} handleChange={handleSelectChange} />
                 <div id='contenedorAnimo'>
                     <h1> ¿Cómo te sientes? </h1>
                     <button id='estadoDeAnimo'>
@@ -50,13 +82,15 @@ function MusicaContextual() {
                     <button className='genero1' >Alternativo</button>
                     <button className='genero1' >Ambiente</button>
                     <button className='genero1' >EDM</button>
-                    <button className={isEstiloElectronica ? 'electronica2' : 'electronica1'} onClick={() => { setIsEstiloElectronica(!isEstiloElectronica); cambiarEstilo(); }}>Electrónica</button>
-                    <button className='genero1' >Disco</button>
+                    <button className={isEstiloElectronica ? 'electronica2' : 'electronica1'} onClick={() => { setIsEstiloElectronica(!isEstiloElectronica) }} disabled={!isElectronicaEnabled}>
+                        Electronica
+                    </button>
+                    <button className='genero1'>Disco </button>
                     <button className='genero1' >New Age</button>
                     <button className='genero1' >Punk</button>
                 </div>
             </div>
-            <Link to='/playlistMC'><button disabled={!isEstiloElectronica} className={isEstiloElectronica ? 'crearPlaylistEnabled' : 'crearPlaylist'}>Crear Playlist</button></Link>
+            <Link to='/playlistMC'><button disabled={!isEstiloElectronica} className={isEstiloElectronica ? 'crearPlaylistEnabled' : 'crearPlaylist'} >Crear Playlist</button></Link>
         </div>
     )
 }

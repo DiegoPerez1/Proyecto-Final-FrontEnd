@@ -22,14 +22,15 @@ function Home() {
           <li className="item">
             <img className="img-playlist" src={cupido} />
             <div className="text">
-            <Link to="/cupido-musical"><h4 className="title">Cupido Músical</h4></Link>
+
+              <Link to="/cupidomusical"><h4 className="title">Cupido Músical</h4></Link>
               <p className="details">Tus artistas favoritos nunca van a dejarte con el corazón roto.</p>
             </div>
           </li>
           <li className="item">
-            <Link to="/musicacontextual"> <img className="img-playlist" src={contextual} /></Link>
+            <Link to="/musica-contextual"> <img className="img-playlist" src={contextual} /></Link>
             <div className="text">
-              <Link to="/musicacontextual"><h4 className="title">Música Contextual</h4></Link>
+              <Link to="/musica-contextual"><h4 className="title">Música Contextual</h4></Link>
               <p className="details">Creamos la playlist perfecta para cualquier situación.</p>
             </div>
           </li>

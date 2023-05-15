@@ -39,6 +39,10 @@
   font-size: 20px;
 }
 
+:hover.buttonLogIn {
+  color: white;
+  background-color: #ff8e0a;
+}
 
 .buttonLogIn {
   width: 320px;

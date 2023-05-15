@@ -3,16 +3,16 @@ import { Link } from "react-router-dom";
 import profilePic from "../assets/ProfilePic.png";
 import config from "../assets/config.svg";
 import album from "../assets/albumImg.png";
-import Justin from "../assets/cupido-img/Justin.png";
-import Angeles from "../assets/cupido-img/Angeles.png";
-import Beegees from "../assets/cupido-img/Beegees.png";
-import Brian from "../assets/cupido-img/Brian.png";
-import Deadmau5 from "../assets/cupido-img/Deadmau5.png";
-import Kendrick from "../assets/cupido-img/Kendrick.png";
-import Marley from "../assets/cupido-img/Marley.png";
-import Ozuna from "../assets/cupido-img/Ozuna.png";
-import Queen from "../assets/cupido-img/Queen.png";
-import Yanni from "../assets/cupido-img/Yanni.png";
+import Justin from "/Justin.png";
+import Angeles from "/Angeles.png";
+import Beegees from "/Beegees.png";
+import Brian from "/Brian.png";
+import Deadmau5 from "/Deadmau5.png";
+import Kendrick from "/Kendrick.png";
+import Marley from "/Marley.png";
+import Ozuna from "/Ozuna.png";
+import Queen from "/Queen.png";
+import Yanni from "/Yanni.png";
 
 export default function Profile() {
   return (

@@ -13,7 +13,7 @@ import homeActive from "../assets/home-icon-active.svg";
 import searchActive from "../assets/search-icon-active.svg";
 import profileActive from "../assets/profile-icon-active.svg";
 import friendsActive from "../assets/friends-icon-active.svg";
-import deadmau5 from "../assets/cupido-img/Deadmau5.png";
+import deadmau5 from "/Deadmau5.png";
 
 
 function PlaylistMC() {
@@ -21,7 +21,7 @@ function PlaylistMC() {
         <div>
             <div id='top-gradient'></div>
             <div id='headerMC'>
-                <Link to='/musicacontextual'>  <img src={leftArrow} alt="" className='arrowMC' /></Link>
+                <Link to='/musica-contextual'>  <img src={leftArrow} alt="" className='arrowMC' /></Link>
                 <img src={tresPuntos} id="trespuntos"></img>
                 <span id='tituloheader1'> Generada de Música Contextual</span>
                 <span id='tituloheader2'> Playlist Generada </span>

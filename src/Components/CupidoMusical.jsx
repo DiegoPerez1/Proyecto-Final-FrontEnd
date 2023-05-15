@@ -1,24 +1,17 @@
-import "../Styles/CupidoMusical.css";
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import "../Styles/CupidoMusical.css";
 import Vector from "../assets/Vector.svg";
 import like from "../assets/green-heart.svg";
 import pass from "../assets/red-cross.svg";
-import Marley from "../assets/cupido-img/Marley.png";
-import Ozuna from "../assets/cupido-img/Ozuna.png";
-import Justin from "../assets/cupido-img/Justin.png";
-import Angeles from "../assets/cupido-img/Angeles.png";
-import Queen from "../assets/cupido-img/Queen.png";
-import Yanni from "../assets/cupido-img/Yanni.png";
-import Kendrick from "../assets/cupido-img/Kendrick.png";
-import Deadmau5 from "../assets/cupido-img/Deadmau5.png";
-import Brian from "../assets/cupido-img/Brian.png";
-import Beegees from "../assets/cupido-img/Beegees.png";
+
 
 function CupidoMusical() {
   const [artistas, setArtistas] = useState([]); //almacena la lista de artistas
   const [currentArtist, setCurrentArtist] = useState([]); //artista actual que se muestra en pantalla
   const [artistasSelect, setArtistasSelect] = useState([]); //almacena artistas seleccionados por el usuario en una lista
   const [playlistCreated, setPlaylistCreated] = useState(false);
+
 
 
   useEffect(() => {
@@ -28,7 +21,7 @@ function CupidoMusical() {
       var myHeaders = new Headers();
       myHeaders.append("Authorization", localStorage.getItem("token"));
       myHeaders.append("Content-Type", "application/json");
-  
+
       var requestOptions = {
         method: "GET",
         headers: myHeaders,
@@ -58,9 +51,11 @@ function CupidoMusical() {
     const nextIndex = (currentIndex + 1) % artistas.length;
     const nextArtist = artistas[nextIndex];
     setCurrentArtist(nextArtist);
-    setArtistasSelect([...artistasSelect, nextArtist]);
+    setArtistasSelect([...artistasSelect, nextArtist.nombre]); // Guardar solo el nombre del artista
   };
-  console.log(artistasSelect);
+
+
+  localStorage.setItem("artistas", JSON.stringify(artistasSelect));
 
   const onClickPass = () => {
     const currentIndex = artistas.indexOf(currentArtist);
@@ -72,14 +67,13 @@ function CupidoMusical() {
     }
   };
 
-  const onClickCrearPlaylist= () => {
+  const onClickCrearPlaylist = () => {
     const token = localStorage.getItem("token");
-
     fetch(`http://localhost:3000/api/cupidoMusical`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Authorization: `${token}`,
+        Authorization: token, // Envía el token en el encabezado Authorization
       },
       body: JSON.stringify({ artistas: artistasSelect }),
     })
@@ -94,8 +88,6 @@ function CupidoMusical() {
       })
       .catch((error) => console.error(error));
   };
- 
-  console.log(currentArtist?.imagen)
   return (
     <div id="container">
       <div id="top-gradient"></div>
@@ -104,7 +96,8 @@ function CupidoMusical() {
         <p id="cupido-title">Cupido Musical</p>
       </header>
       <main>
-      <img id="img-artist" src={`../assets/cupido-img/${currentArtist.imagen}.png`} alt={`Foto de ${currentArtist.imagen}`} />
+        <img id="img-artist" src={`${"/"}${currentArtist?.imagen}${".png"}`} alt={currentArtist?.nombre} />
+
         <p id="nombre-artista">{currentArtist?.nombre}</p>
         <section id="both-icons">
           <button className="icon-btn" onClick={onClickLike}>
