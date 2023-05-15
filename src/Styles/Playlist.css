@@ -1,120 +1,130 @@
 .contenedorPlayList {
-    padding: 2.5rem 2.5rem 2.5em 1.5rem;
-    background: linear-gradient(360deg, rgba(253, 254, 255, 0) 40%, rgba(255, 141, 10, 0.288) 95%, rgba(255, 141, 10, 0.363) 100%);
+  width: 418px;
+  height: 500px;
 }
-
 .headerPlayList {
-    display: flex;
-    justify-content: space-between;
+  position: absolute;
+  width: 320px;
+  height: 40px;
+  left: 24px;
+  top: 24px;
 }
-
-.infoUserSection {
-    padding-top: 2rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+#back-playlist {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  left: 0px;
+  top: 8px;
 }
-
-.userInfo {
-    display: flex;
-    justify-content: space-around;
-    align-items: start;
-    gap: 1rem;
+#titulo-playlist {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  position: absolute;
+  width: 272px;
+  height: 40px;
+  left: 24px;
+  top: 0px;
 }
-
-.iconsPlaylist {
-    width: 25px;
-    height: 24.31px;
+#titulo-opciones {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  left: 296px;
+  top: 8px;
 }
-
 .albumPlaylistSection {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 2rem;
-}
-
-.buttonAlbumSection {
-    display: flex;
-    gap: 1rem;
+  position: absolute;
+  width: 224px;
+  height: 224px;
+  left: 72px;
+  top: 88px;
 
 }
-
-.buttonPlaylist {
-    width: 113px;
-    height: 26px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    border: 1.25px solid #26262E;
-    border-radius: 0px 8px;
-    font-size: 12px;
-    background: none;
+#logos-duracion {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 8px;
+  position: absolute;
+  width: 316px;
+  height: 24px;
+  left: 24px;
+  top: 336px;
 }
-
-.albumOptionsSection {
-    display: flex;
-    justify-content: space-around;
-    padding-top: 2rem;
+#timeList {
+  display: flex;
+  position: absolute;
+  left: 270px;
+  gap: 0.5rem;
 }
-
-.timePlaylistSection {
-    display: flex;
-    gap: 1rem;
+#icons-playlist {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 16px;
+  position: absolute;
+  width: 320px;
+  height: 48px;
+  left: 30px;
+  top: 384px;
 }
-
-.addSongAlbumSection {
-    display: flex;
-    padding-top: 2.5rem;
-    justify-content: space-around;
+#play-shuffle {
+  display: flex;
+  gap: 16px;
+  position: absolute;
+  left: 248px;
 }
-
-.addSongSection {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    font-size: 20px;
-    color: #26262E;
-}
-
-.playPlaylistSection {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-}
-
-.playButton {
-    padding: auto;
-}
-
 .songsPlaylistSection {
-    display: flex;
-    padding-top: 3rem;
-    justify-content: center;
-    align-items: center;
-    height: 300px;
-    overflow-y: auto;
-    flex-direction: column;
+  position: absolute;
+  width: 368px;
+  height: 150px;
+  left: 30px;
+  top: 450px;
 }
-
-.listSongsPlaylist {
-    display: flex;
-    justify-content: start;
-    width: 300px;
-    gap: 1rem;
-    padding-top: 1rem;
-}
-
 .playlistSongsIcons {
-    width: 48px;
-    height: 48px;
+  width: 48px;
+  height: 48px;
+}
+.listSongsPlaylist {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 8px;
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  left: 0px;
+  top: 0px;
+  overflow-y: scroll;
 }
 
-.songOptionsIcon {
-    display: flex;
-    padding-left: 5rem;
-    padding-bottom: 10px;
+.listSongsPlaylist li {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+#nombre-cancion{
+    position: absolute;
+    left: 3.5rem;
+margin-top: -6%;
+}
+#artista-cancion{
+    position: absolute;
+    left: 4rem;
+}
+#detalles-cancion{
+    position: absolute;
+    left: 18rem;
+}
+#imagenes-playlist{
+  width: 112px;
+  height: 112px;
+  border-radius: 0px 0px 0px 32.9412px;
 }

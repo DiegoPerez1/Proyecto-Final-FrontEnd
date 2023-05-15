@@ -72,6 +72,10 @@ const router = createBrowserRouter([
         path: "profile",
         element: <Profile />,
       },
+      {
+        path: "playlist",
+        element: <Playlists />,
+      },
     ],
   },
   {
@@ -93,10 +97,6 @@ const router = createBrowserRouter([
   {
     path: "/playlist",
     element: <Playlists />,
-  },
-  {
-    path: "*",
-    element: <Error404 />,
   },
 ]);
 

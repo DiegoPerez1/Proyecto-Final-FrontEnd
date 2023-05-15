@@ -5,21 +5,26 @@ import profilePiccPlaylist from "../assets/profile-pic.png";
 import addFriend from "../assets/addFriendIcon.svg";
 import album from "../assets/albumImg.png";
 import candadoOpen from "../assets/candadoOpen.svg";
-import share from "../assets/compartirIcon.svg";
+import share from "../assets/share-icon.svg";
 import reloj from "../assets/relojIcon.svg";
 import addIcon from "../assets/agregarIcon.svg";
 import shuffle from "../assets/aleatorioIcon.svg";
 import playButton from "../assets/playButton.svg";
+import logoSmall from "../assets/logo-small.svg";
+import verify from "../assets/verify.svg";
+import copia from "../assets/copia.svg";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 function Playlists() {
   const [cancionesPlaylist, setCancionesPlaylist] = useState([]);
+   
   useEffect(() => {
     const fetchCanciones = async () => {
       try {
         const playlistId = localStorage.getItem("idPlaylist");
         const response = await fetch(
-          `http://localhost:3000/api/playlist/${playlistId}/canciones`
+          `http://localhost:3000/api/playlist/${playlistId}/cancionesCupido`
         );
         if (response.ok) {
           const data = await response.json();
@@ -34,152 +39,57 @@ function Playlists() {
 
   return (
     <div className="contenedorPlayList">
+      <div id="top-gradient"></div>
       <header className="headerPlayList">
-        <section>
-          <img src={leftArrow} alt="" />{" "}
-        </section>
-        <section>nombreDeLaPlayulist </section>
-        <section>
-          <img src={tresPuntos} alt="" />
-        </section>
+      <Link to='/nav/home'><img id="back-arrow" src={leftArrow}/></Link>
+        <div id="titulo-playlist">
+          <p>Generada del Cupido Musical</p>
+          <p>Playlist Generada</p>
+        </div>
+        <img src={tresPuntos} id="titulo-opciones" />
       </header>
-      <section className="infoUserSection">
-        <div className="userInfo">
-          <img src={profilePiccPlaylist} alt="" /> <p>mara_pg</p>
-        </div>
-        <div>
-          <img src={addFriend} alt="" className="iconsPlaylist" />
-        </div>
-      </section>
+      {cancionesPlaylist.map((cancion) => (
       <section className="albumPlaylistSection">
-        <img src={album} alt="" />
+        <img src={`${"/"}${cancion.imagen}${".png"}`} id="imagenes-playlist"/>
+        <img src={`${"/"}${cancion.imagen}${".png"}`} id="imagenes-playlist"/>
+        <img src={`${"/"}${cancion.imagen}${".png"}`} id="imagenes-playlist"/>
+        <img src={`${"/"}${cancion.imagen}${".png"}`} id="imagenes-playlist"/>
       </section>
-      <section className="albumOptionsSection">
-        <section className="buttonAlbumSection">
-          <div>
-            <button className="buttonPlaylist">Mejorar playlist</button>
-          </div>
-          <div>
-            <img src={candadoOpen} alt="" className="iconsPlaylist" />
-          </div>
-          <div>
-            <img src={share} alt="" className="iconsPlaylist" />
-          </div>
-        </section>
-        <section className="timePlaylistSection">
-          <div>
-            <p>00:00</p>
-          </div>
-          <div>
-            <img src={reloj} alt="" className="iconsPlaylist" />
-          </div>
-        </section>
+  ))}
+      <section id="logos-duracion">
+        <img src={logoSmall} />
+        <img src={verify} />
+        <img src={share} />
+        <div id="timeList">
+          <p>00:00</p>
+          <img src={reloj} />
+        </div>
       </section>
-      <section className="addSongAlbumSection">
-        <section className="addSongSection">
-          <div>
-            <img src={addIcon} alt="" className="iconsPlaylist" />
-          </div>
-          <div>
-            <p>Añadir cancion</p>
-          </div>
-        </section>
-        <section className="playPlaylistSection">
-          <div>
-            <img src={shuffle} alt="" className="iconsPlaylist" />
-          </div>
-          <div>
-            <img src={playButton} alt="" className="playButton" />
-          </div>
-        </section>
+
+      <section id="icons-playlist">
+        <img src={copia} />
+        <p>Crear Copia</p>
+        <div id="play-shuffle">
+          <img src={shuffle} alt="" className="iconsPlaylist" />
+          <img src={playButton} alt="" className="playButton" />
+        </div>
       </section>
       <section className="songsPlaylistSection">
-        {cancionesPlaylist.map((cancion) => (
-          <section className="listSongsPlaylist" key={cancion.id}>
-            <div>
-              <img src={album} alt="" className="playlistSongsIcons" />
-            </div>
-            <div>
-              <h5>{cancion.nombre}</h5>
-              <p>{cancion.artista}</p>
-            </div>
-            <div className="songOptionsIcon">
-              <img src={tresPuntos} alt="" />
-            </div>
-          </section>
-        ))}
-        <section className="listSongsPlaylist">
-          <div>
-            <img src={album} alt="" className="playlistSongsIcons" />
-          </div>
-          <div>
-            <h5>Nombre cancion</h5>
-            <p>Nombre artista</p>
-          </div>
-          <div className="songOptionsIcon">
-            <img src={tresPuntos} alt="" />
-          </div>
-        </section>
-        <section className="listSongsPlaylist">
-          <div>
-            <img src={album} alt="" className="playlistSongsIcons" />
-          </div>
-          <div>
-            <h5>Nombre cancion</h5>
-            <p>Nombre artista</p>
-          </div>
-          <div className="songOptionsIcon">
-            <img src={tresPuntos} alt="" />
-          </div>
-        </section>
-        <section className="listSongsPlaylist">
-          <div>
-            <img src={album} alt="" className="playlistSongsIcons" />
-          </div>
-          <div>
-            <h5>Nombre cancion</h5>
-            <p>Nombre artista</p>
-          </div>
-          <div className="songOptionsIcon">
-            <img src={tresPuntos} alt="" />
-          </div>
-        </section>
-        <section className="listSongsPlaylist">
-          <div>
-            <img src={album} alt="" className="playlistSongsIcons" />
-          </div>
-          <div>
-            <h5>Nombre cancion</h5>
-            <p>Nombre artista</p>
-          </div>
-          <div className="songOptionsIcon">
-            <img src={tresPuntos} alt="" />
-          </div>
-        </section>
-        <section className="listSongsPlaylist">
-          <div>
-            <img src={album} alt="" className="playlistSongsIcons" />
-          </div>
-          <div>
-            <h5>Nombre cancion</h5>
-            <p>Nombre artista</p>
-          </div>
-          <div className="songOptionsIcon">
-            <img src={tresPuntos} alt="" />
-          </div>
-        </section>
-        <section className="listSongsPlaylist">
-          <div>
-            <img src={album} alt="" className="playlistSongsIcons" />
-          </div>
-          <div>
-            <h5>Nombre cancion</h5>
-            <p>Nombre artista</p>
-          </div>
-          <div className="songOptionsIcon">
-            <img src={tresPuntos} alt="" />
-          </div>
-        </section>
+        <ul className="listSongsPlaylist">
+          {cancionesPlaylist.map((cancion) => (
+            <li key={cancion.id}>
+              <img
+                src={`${"/"}${cancion.imagen}${".png"}`}
+                className="playlistSongsIcons"
+              />
+              <div id="nombre-artista-playlist">
+                <h5 id="nombre-cancion">{cancion.nombre}</h5>
+                <p id="artista-cancion">{cancion.artista}</p>
+              </div>
+              <img src={tresPuntos} id="detalles-cancion" />
+            </li>
+          ))}
+        </ul>
       </section>
     </div>
   );
