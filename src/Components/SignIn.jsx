@@ -1,7 +1,6 @@
-import React, { Component } from 'react'
+import '../Styles/SignIn.css' 
 import { Link } from 'react-router-dom';
-import '../Styles/SignIn.css'
-import leftArrow from '../src/assets/Vector.svg'
+import leftArrow from '../assets/Vector.svg'
 
 function SignIn() {
 

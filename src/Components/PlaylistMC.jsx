@@ -1,21 +1,20 @@
-import React from 'react';
 import "../Styles/PlaylistMC.css";
 import { Link } from "react-router-dom";
-import leftArrow from "../src/assets/Vector.svg";
-import placeholderIcon from "../src/assets/placeholder-icon.svg";
-import verified from "../src/assets/verified-icon.svg"
-import share from "../src/assets/share-icon.svg";
-import history from "../src/assets/history-icon.svg";
-import copy from "../src/assets/copy-icon.svg";
-import shuffle from "../src/assets/shuffle-icon.svg";
-import play from "../src/assets/play-icon.svg";
-import tresPuntos from "../src/assets/trespuntos.svg";
-import homeActive from "../src/assets/home-icon-active.svg";
-import searchActive from "../src/assets/search-icon-active.svg";
-import profileActive from "../src/assets/profile-icon-active.svg";
-import friendsActive from "../src/assets/friends-icon-active.svg";
-import deadmau5 from "../src/assets/cupido-img/Deadmau5.png";
-import "../Styles/Navbar.css";
+import leftArrow from "../assets/Vector.svg";
+import placeholderIcon from "../assets/placeholder-icon.svg";
+import verified from "../assets/verified-icon.svg"
+import share from "../assets/share-icon.svg";
+import history from "../assets/history-icon.svg";
+import copy from "../assets/copy-icon.svg";
+import shuffle from "../assets/shuffle-icon.svg";
+import play from "../assets/play-icon.svg";
+import tresPuntos from "../assets/trespuntos.svg";
+import homeActive from "../assets/home-icon-active.svg";
+import searchActive from "../assets/search-icon-active.svg";
+import profileActive from "../assets/profile-icon-active.svg";
+import friendsActive from "../assets/friends-icon-active.svg";
+import deadmau5 from "/Deadmau5.png";
+
 
 function PlaylistMC() {
     return (

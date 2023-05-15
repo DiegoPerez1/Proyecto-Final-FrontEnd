@@ -1,7 +1,6 @@
-import React from "react";
 import "../Styles/ProfileConfig.css";
 import { Link } from "react-router-dom";
-import leftArrow from "../src/assets/Vector.svg";
+import leftArrow from "../assets/Vector.svg";
 
 function ProfileConfig() {
   return (

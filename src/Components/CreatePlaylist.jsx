@@ -1,7 +1,6 @@
-import React from 'react'
-import leftArrow from '../src/assets/Vector.svg'
 import '../Styles/CreatePlaylist.css'
 import { Link } from "react-router-dom";
+import leftArrow from '../assets/Vector.svg'
 
 function CreatePlaylist() {
     return (

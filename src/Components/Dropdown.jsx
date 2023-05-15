@@ -1,9 +1,6 @@
-import React, { useState } from 'react';
-import vector from "../src/assets/vectorabajo.svg";
-import Select from 'react-select';
+
 import "../Styles/Dropdown.css";
-
-
+import Select from 'react-select';
 
 const options = [
     { value: "", label: "Actividad" },

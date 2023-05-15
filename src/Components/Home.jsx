@@ -1,9 +1,9 @@
 import "../Styles/Home.css";
-import historyIcon from "../src/assets/history.svg";
-import notificationIcon from "../src/assets/notification.svg";
-import cupido from "../src/assets/cupido.svg";
-import contextual from "../src/assets/contextual.svg";
 import { Link } from "react-router-dom";
+import historyIcon from "../assets/history.svg";
+import notificationIcon from "../assets/notification.svg";
+import cupido from "../assets/cupido.svg";
+import contextual from "../assets/contextual.svg";
 
 function Home() {
   return (
@@ -22,7 +22,8 @@ function Home() {
           <li className="item">
             <img className="img-playlist" src={cupido} />
             <div className="text">
-              <Link to="/cupido-musical"><h4 className="title">Cupido Músical</h4></Link>
+
+              <Link to="/cupidomusical"><h4 className="title">Cupido Músical</h4></Link>
               <p className="details">Tus artistas favoritos nunca van a dejarte con el corazón roto.</p>
             </div>
           </li>
