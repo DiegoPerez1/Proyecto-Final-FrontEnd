@@ -1,5 +1,5 @@
 
-import './Styles/index.css' 
+import './Styles/index.css'
 import React from 'react';
 import ReactDOM from 'react-dom/client'
 import { createBrowserRouter } from 'react-router-dom';
@@ -18,6 +18,7 @@ import Profile from './Components/Profile';
 import ProfileConfig from './Components/ProfileConfig';
 import Playlists from './Components/Playlists';
 import CreatePlaylist from './Components/CreatePlaylist';
+import RecuperarCuenta from './Components/RecuperarCuenta.jsx'
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
   {
     path: "/login",
     element: <LogIn />,
+  },
+  {
+    path: "/recover-account",
+    element: <RecuperarCuenta />
   },
   {
     path: "/signin",
@@ -67,7 +72,7 @@ const router = createBrowserRouter([
     element: <CupidoMusical />,
   },
   {
-    path: "/musicacontextual",
+    path: "/musica-contextual",
     element: <MusicaContextual />,
   },
   {

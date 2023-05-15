@@ -15,6 +15,10 @@ function CupidoMusical() {
   const [cancionesPlaylist, setCancionesPlaylist] = useState([]);
 const navigate= useNavigate()
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 3aa8612b7ec3d909011359812789d23629f98ef7
 
   useEffect(() => {
     // se realiza una solicitud GET a /api/artistas para obtener una lista de artistas desde el servidor.
@@ -23,7 +27,7 @@ const navigate= useNavigate()
       var myHeaders = new Headers();
       myHeaders.append("Authorization", localStorage.getItem("token"));
       myHeaders.append("Content-Type", "application/json");
-  
+
       var requestOptions = {
         method: "GET",
         headers: myHeaders,
@@ -55,9 +59,9 @@ const navigate= useNavigate()
     setCurrentArtist(nextArtist);
     setArtistasSelect([...artistasSelect, nextArtist.nombre]); // Guardar solo el nombre del artista
   };
-  
-  
-   localStorage.setItem("artistas", JSON.stringify(artistasSelect));
+
+
+  localStorage.setItem("artistas", JSON.stringify(artistasSelect));
 
   const onClickPass = () => {
     const currentIndex = artistas.indexOf(currentArtist);
@@ -69,7 +73,7 @@ const navigate= useNavigate()
     }
   };
 
-  const onClickCrearPlaylist= () => {
+  const onClickCrearPlaylist = () => {
     const token = localStorage.getItem("token");
     fetch(`http://localhost:3000/api/cupidoMusical`, {
       method: "POST",
@@ -99,7 +103,7 @@ const navigate= useNavigate()
         <p id="cupido-title">Cupido Musical</p>
       </header>
       <main>
-      <img id="img-artist" src={`${"/"}${currentArtist?.imagen}${".png"}`} alt={currentArtist?.nombre} />
+        <img id="img-artist" src={`${"/"}${currentArtist?.imagen}${".png"}`} alt={currentArtist?.nombre} />
 
         <p id="nombre-artista">{currentArtist?.nombre}</p>
         <section id="both-icons">

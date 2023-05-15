@@ -1,5 +1,5 @@
 import "../Styles/Signin2.css";
-import  {useState} from "react";
+import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import leftArrow from "../assets/Vector.svg";
 
@@ -8,9 +8,45 @@ function Signin2() {
   const [pass, setPass] = useState("");
   const [email, setEmail] = useState("");
   const navigate = useNavigate();
+  const [userName, setUserName] = useState('');
+  const [password, setPassword] = useState('');
+  const [emails, setEmails] = useState('');
+  const [habilitarBoton, setHabilitarBoton] = useState(false);
 
+
+  const verificarCamposCompletos = () => {
+    if (userName !== '' && password !== '' && emails !== '') {
+      setHabilitarBoton(true);
+    } else {
+      setHabilitarBoton(false);
+    }
+    console.log(verificarCamposCompletos)
+  };
+
+  const handlepassword = (event) => {
+    setPassword(event.target.value);
+    setPass(event.target.value)
+    verificarCamposCompletos();
+  };
+
+  const handleUser = (event) => {
+    setUserName(event.target.value);
+    setNombre(event.target.value)
+    verificarCamposCompletos();
+  };
+
+  const handleEmail = (event) => {
+    setEmails(event.target.value);
+    setEmail(event.target.value)
+    verificarCamposCompletos();
+  };
   const registro = async (event) => {
     event.preventDefault();
+
+
+
+
+
 
     const myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
@@ -52,7 +88,7 @@ function Signin2() {
       <div id="top-gradient"></div>
       <section >
         <section>
-          <Link to='/signin'>  <img src={leftArrow} alt="" className='arrowSignIn' /></Link>
+          <Link to='/signin'><img src={leftArrow} alt="" className='arrowSignIn' /></Link>
         </section>
         <section className='headerText'>
           <p>Crear cuenta</p>
@@ -69,9 +105,9 @@ function Signin2() {
           <input
             className='inputLogIn'
             type="text"
-            onChange={(e) => {
-              setEmail(e.target.value);
-            }}
+            onChange={
+              handleEmail
+            }
             value={email}
           />
           <p>Deberias poder confirmarlo luego</p>
@@ -81,9 +117,7 @@ function Signin2() {
           <input
             className='inputLogIn'
             type="text"
-            onChange={(e) => {
-              setNombre(e.target.value);
-            }}
+            onChange={handleUser}
             value={nombre}
           />
         </section>
@@ -92,9 +126,7 @@ function Signin2() {
           <input
             className='inputLogIn'
             type="text"
-            onChange={(e) => {
-              setPass(e.target.value);
-            }}
+            onChange={handlepassword}
             value={pass}
           />
           <p className='passVerification'>Debera contener al menos 8 caracteres</p>
@@ -104,7 +136,7 @@ function Signin2() {
           <p><p>He leido y acepto los <a href="">Terminos</a> y <a href="">Condiciones</a> </p></p>
         </section>
         <section className="buttonSectionSignIn">
-          <button className="buttonSignin ">Continuar</button>
+          <button className={habilitarBoton ? 'activo' : 'inactivo'} disabled={!habilitarBoton}>Continuar</button>
         </section>
       </form>
     </div>

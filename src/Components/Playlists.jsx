@@ -13,6 +13,7 @@ import playButton from "../assets/playButton.svg";
 import { useEffect, useState } from "react";
 
 function Playlists() {
+<<<<<<< HEAD
   const [cancionesPlaylist, setCancionesPlaylist] = useState([]);
   useEffect(() => {
     const fetchCanciones = async () => {
@@ -31,6 +32,146 @@ function Playlists() {
     };
     fetchCanciones();
   }, []);
+=======
+    return (
+        <div className='contenedorPlayList'>
+            <header className='headerPlayList'>
+                <section><img src={leftArrow} alt="" /> </section>
+                <section>nombreDeLaPlaylist </section>
+                <section><img src={tresPuntos} alt="" /></section>
+            </header>
+            <section className='infoUserSection'>
+                <div className='userInfo'>
+                    <img src={profilePiccPlaylist} alt="" /> <p>mara_pg</p>
+                </div>
+                <div >
+                    <img src={addFriend} alt="" className='iconsPlaylist' />
+                </div>
+            </section>
+            <section className='albumPlaylistSection'>
+                <img src={album} alt="" />
+            </section>
+            <section className='albumOptionsSection'>
+                <section className='buttonAlbumSection'>
+                    <div><button className='buttonPlaylist'>Mejorar playlist</button></div>
+                    <div><img src={candadoOpen} alt="" className='iconsPlaylist' /></div>
+                    <div><img src={share} alt="" className='iconsPlaylist' /></div>
+                </section>
+                <section className='timePlaylistSection'>
+                    <div>
+                        <p>00:00</p>
+                    </div>
+                    <div><img src={reloj} alt="" className='iconsPlaylist' /></div>
+                </section>
+            </section>
+            <section className='addSongAlbumSection'>
+                <section className='addSongSection'>
+                    <div>
+                        <img src={addIcon} alt="" className='iconsPlaylist' />
+                    </div>
+                    <div>
+                        <p>Añadir cancion</p>
+                    </div>
+                </section>
+                <section className='playPlaylistSection'>
+                    <div>
+                        <img src={shuffle} alt="" className='iconsPlaylist' />
+                    </div>
+                    <div>
+                        <img src={playButton} alt="" className='playButton' />
+                    </div>
+                </section>
+
+            </section>
+            <section className='songsPlaylistSection'>
+                <section className='listSongsPlaylist'>
+                    <div>
+                        <img src={album} alt="" className='playlistSongsIcons' />
+                    </div>
+                    <div>
+                        <h5>Nombre cancion</h5>
+                        <p>Nombre artista</p>
+                    </div>
+                    <div className='songOptionsIcon'>
+                        <img src={tresPuntos} alt="" />
+                    </div>
+                </section>
+                <section className='listSongsPlaylist'>
+                    <div>
+                        <img src={album} alt="" className='playlistSongsIcons' />
+                    </div>
+                    <div>
+                        <h5>Nombre cancion</h5>
+                        <p>Nombre artista</p>
+                    </div>
+                    <div className='songOptionsIcon'>
+                        <img src={tresPuntos} alt="" />
+                    </div>
+                </section>
+                <section className='listSongsPlaylist'>
+                    <div>
+                        <img src={album} alt="" className='playlistSongsIcons' />
+                    </div>
+                    <div>
+                        <h5>Nombre cancion</h5>
+                        <p>Nombre artista</p>
+                    </div>
+                    <div className='songOptionsIcon'>
+                        <img src={tresPuntos} alt="" />
+                    </div>
+                </section>
+                <section className='listSongsPlaylist'>
+                    <div>
+                        <img src={album} alt="" className='playlistSongsIcons' />
+                    </div>
+                    <div>
+                        <h5>Nombre cancion</h5>
+                        <p>Nombre artista</p>
+                    </div>
+                    <div className='songOptionsIcon'>
+                        <img src={tresPuntos} alt="" />
+                    </div>
+                </section>
+                <section className='listSongsPlaylist'>
+                    <div>
+                        <img src={album} alt="" className='playlistSongsIcons' />
+                    </div>
+                    <div>
+                        <h5>Nombre cancion</h5>
+                        <p>Nombre artista</p>
+                    </div>
+                    <div className='songOptionsIcon'>
+                        <img src={tresPuntos} alt="" />
+                    </div>
+                </section>
+                <section className='listSongsPlaylist'>
+                    <div>
+                        <img src={album} alt="" className='playlistSongsIcons' />
+                    </div>
+                    <div>
+                        <h5>Nombre cancion</h5>
+                        <p>Nombre artista</p>
+                    </div>
+                    <div className='songOptionsIcon'>
+                        <img src={tresPuntos} alt="" />
+                    </div>
+                </section>
+                <section className='listSongsPlaylist'>
+                    <div>
+                        <img src={album} alt="" className='playlistSongsIcons' />
+                    </div>
+                    <div>
+                        <h5>Nombre cancion</h5>
+                        <p>Nombre artista</p>
+                    </div>
+                    <div className='songOptionsIcon'>
+                        <img src={tresPuntos} alt="" />
+                    </div>
+                </section>
+
+
+            </section>
+>>>>>>> 3aa8612b7ec3d909011359812789d23629f98ef7
 
   return (
     <div className="contenedorPlayList">

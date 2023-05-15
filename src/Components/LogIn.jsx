@@ -7,6 +7,36 @@ function Login() {
   const [user, setUser] = useState("");
   const [pass, setPass] = useState("");
   const navigate = useNavigate();
+  const [userName, setUserName] = useState('');
+  const [password, setPassword] = useState('');
+  const [habilitarBoton, setHabilitarBoton] = useState(false);
+
+
+  const verificarCamposCompletos = () => {
+    if (userName !== '' && password !== '') {
+      setHabilitarBoton(true);
+    } else {
+      setHabilitarBoton(false);
+    }
+    console.log(verificarCamposCompletos)
+  };
+
+  const handlepassword = (event) => {
+    setPassword(event.target.value);
+    setPass(event.target.value)
+    verificarCamposCompletos();
+  };
+
+  const handleUser = (event) => {
+    setUserName(event.target.value);
+    setUser(event.target.value)
+    verificarCamposCompletos();
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+  };
+
 
   const login = async (event) => {
     event.preventDefault();
@@ -62,9 +92,9 @@ function Login() {
           <input
             className="inputLogIn"
             type="text"
-            onChange={(e) => {
-              setUser(e.target.value);
-            }}
+            onChange={
+              handleUser
+            }
             value={user}
           />
         </section>
@@ -72,18 +102,20 @@ function Login() {
         <section className="passwordSectionLogin">
           <label htmlFor="">Contraseña:</label>
           <input
+
             className="inputLogIn"
             type="text"
-            onChange={(e) => {
-              setPass(e.target.value);
-            }}
+            onChange={
+              handlepassword
+            }
             value={pass}
           />
         </section>
         <section className="buttonSectionLogIn">
-          <button className="buttonLogIn" type="submit">
+          <button className={habilitarBoton ? 'activo' : 'inactivo'} type="submit" disabled={!habilitarBoton}>
             Iniciar sesion
           </button>
+          <Link to={'/recover-account'}><p className="olvidasteTuContraseña">¿Olvidaste tu contraseña?</p></Link>
         </section>
       </form>
     </div>
