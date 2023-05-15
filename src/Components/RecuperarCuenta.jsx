@@ -47,7 +47,7 @@ function SignIn() {
         event.preventDefault();
     };
     return (
-        <div id='top-container-recuperarCuenta' className={`containerSignIn  ${showModal ? 'modalOpen' : ''}`}>
+        <div id='top-container-recuperarCuenta' className={`containerRevoverAccount   ${showModal ? 'modalOpen' : ''}`}>
             <section >
                 <section className='headerArrow'>
                     <Link to='/login'>  <img src={leftArrow} alt="" className='arrowSignIn' /></Link>

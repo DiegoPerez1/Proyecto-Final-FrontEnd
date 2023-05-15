@@ -1,4 +1,4 @@
-import '../Styles/SignIn.css' 
+import '../Styles/SignIn.css'
 import { Link } from 'react-router-dom';
 import leftArrow from '../assets/Vector.svg'
 

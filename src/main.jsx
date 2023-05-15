@@ -19,6 +19,7 @@ import ProfileConfig from './Components/ProfileConfig';
 import Playlists from './Components/Playlists';
 import CreatePlaylist from './Components/CreatePlaylist';
 import RecuperarCuenta from './Components/RecuperarCuenta.jsx'
+import TerminosYCondicionnes from './Components/TerminosYCondicionnes';
 
 const router = createBrowserRouter([
   {
@@ -66,6 +67,10 @@ const router = createBrowserRouter([
         element: <Profile />,
       },
     ],
+  },
+  {
+    path: "/terminos-condiciones",
+    element: <TerminosYCondicionnes />
   },
   {
     path: "/cupidomusical",
