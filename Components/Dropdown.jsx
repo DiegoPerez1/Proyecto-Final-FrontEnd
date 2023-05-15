@@ -24,7 +24,7 @@ const customStyles = {
         fontSize: '16px',
         padding: '5px',
         height: '40px',
-        border: '2px solid #26262e',
+        border: `2px solid ${state.isDisabled ? 'black' : 'black'}`,
         borderRadius: '0px 16px',
         width: '300px',
         marginLeft: '35px',
@@ -32,6 +32,9 @@ const customStyles = {
         overflow: 'visible',
         color: 'grey',
         cursor: 'pointer',
+        ':hover': {
+            borderColor: '#FFA500',
+        },
     }),
     menu: (provided, state) => ({
         ...provided,
@@ -68,13 +71,13 @@ const customStyles = {
 };
 
 function Dropdown(props) {
-    const { titulo, placeholder } = props;
+    const { titulo, placeholder, handleChange } = props;
 
 
     return (
         <div id='contenedorInput'>
             <h1>{titulo}</h1>
-            <Select options={options} styles={customStyles} placeholder={placeholder} />
+            <Select options={options} styles={customStyles} placeholder={placeholder} onChange={(selectedOption) => handleChange(selectedOption)} />
         </div>
     );
 }

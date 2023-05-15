@@ -22,7 +22,7 @@ function PlaylistMC() {
         <div>
             <div id='top-gradient'></div>
             <div id='headerMC'>
-                <Link to='/musicacontextual'>  <img src={leftArrow} alt="" className='arrowMC' /></Link>
+                <Link to='/musica-contextual'>  <img src={leftArrow} alt="" className='arrowMC' /></Link>
                 <img src={tresPuntos} id="trespuntos"></img>
                 <span id='tituloheader1'> Generada de Música Contextual</span>
                 <span id='tituloheader2'> Playlist Generada </span>

@@ -116,7 +116,7 @@ h7 {
 }
 
 .genero1 {
-    pointer-events: none;
+    /* pointer-events: none; */
     height: fit-content;
     width: fit-content;
     padding: 5px;

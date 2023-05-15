@@ -17,7 +17,7 @@ function Playlists() {
         <div className='contenedorPlayList'>
             <header className='headerPlayList'>
                 <section><img src={leftArrow} alt="" /> </section>
-                <section>nombreDeLaPlayulist </section>
+                <section>nombreDeLaPlaylist </section>
                 <section><img src={tresPuntos} alt="" /></section>
             </header>
             <section className='infoUserSection'>

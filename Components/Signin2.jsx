@@ -88,7 +88,7 @@ function Signin2() {
           />
         </section>
         <section className="passwordSectionSignIn">
-          <label htmlFor="">Contraaseña:</label>
+          <label htmlFor="">Contraseña:</label>
           <input
             className='inputLogIn'
             type="text"

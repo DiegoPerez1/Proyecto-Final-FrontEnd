@@ -67,7 +67,7 @@ const router = createBrowserRouter([
     element: <CupidoMusical />,
   },
   {
-    path: "/musicacontextual",
+    path: "/musica-contextual",
     element: <MusicaContextual />,
   },
   {
