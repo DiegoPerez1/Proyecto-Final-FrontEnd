@@ -98,6 +98,10 @@ const router = createBrowserRouter([
     path: "/playlist",
     element: <Playlists />,
   },
+  {
+    path: "*",
+    element: <Error404 />,
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
