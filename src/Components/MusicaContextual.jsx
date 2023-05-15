@@ -83,6 +83,7 @@ function MusicaContextual() {
         );
     }
 
+
     return (
         <div id="container">
             <div id="top-gradient"></div>

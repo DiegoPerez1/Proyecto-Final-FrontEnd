@@ -50,22 +50,44 @@
     margin-bottom: 20px;
 }
 
-select option {
-    background-color: #f2f2f2;
-    /* Color de fondo de las opciones */
-    color: #333;
-    /* Color de texto de las opciones */
-    padding: 35px;
-    /* Espaciado interno de las opciones */
+.custom-select {
+    position: relative;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
-/* Estilo para la opción seleccionada */
-select option:checked {
-    background-color: #ccc;
-    /* Color de fondo de la opción seleccionada */
-    color: #fff;
-    /* Color de texto de la opción seleccionada */
+.selected-option {
+    display: block;
+    padding: 5px;
+    cursor: pointer;
 }
+
+.options-list {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #f2f2f2;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border: 1px solid #ccc;
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+}
+
+.option {
+    padding: 5px;
+    cursor: pointer;
+}
+
+/* Mostrar las opciones al hacer clic en el elemento personalizado */
+.custom-select.open .options-list {
+    display: block;
+}
+
 
 
 h7 {

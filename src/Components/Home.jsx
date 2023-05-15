@@ -20,7 +20,7 @@ function Home() {
       <main id="main-container">
         <ul id="list">
           <li className="item">
-            <img className="img-playlist" src={cupido} />
+            <Link to="/cupidomusical"><img className="img-playlist" src={cupido} /></Link>
             <div className="text">
 
               <Link to="/cupidomusical"><h4 className="title">Cupido Músical</h4></Link>
