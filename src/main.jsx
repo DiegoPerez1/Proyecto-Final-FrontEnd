@@ -65,6 +65,10 @@ const router = createBrowserRouter([
         path: "profile",
         element: <Profile />,
       },
+      {
+        path: "playlist",
+        element: <Playlists />,
+      },
     ],
   },
   {
@@ -78,10 +82,6 @@ const router = createBrowserRouter([
   {
     path: "/playlistMC",
     element: <PlaylistMC />,
-  },
-  {
-    path: "/playlist",
-    element: <Playlists />,
   },
 ]);
 
