@@ -1,0 +1,32 @@
+/* Transición de entrada */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Transición de salida */
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Aplicar la animación a los componentes */
+.component-enter {
+    animation: fadeIn 300ms ease-in;
+    opacity: 0;
+}
+
+.component-exit {
+    animation: fadeOut 300ms ease-out;
+    opacity: 1;
+}

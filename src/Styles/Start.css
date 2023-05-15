@@ -98,6 +98,7 @@ button {
   background-color: #ff8e0a;
   color: #fdfeff;
   border: none;
+  cursor: pointer;
 }
 
 #btn-login {

@@ -13,7 +13,7 @@ function CupidoMusical() {
   const [artistasSelect, setArtistasSelect] = useState([]); //almacena artistas seleccionados por el usuario en una lista
   const [playlistCreated, setPlaylistCreated] = useState(false);
   const [cancionesPlaylist, setCancionesPlaylist] = useState([]);
-const navigate= useNavigate()
+  const navigate = useNavigate()
 
 
   useEffect(() => {
@@ -47,15 +47,15 @@ const navigate= useNavigate()
 
 
   const onClickLike = () => {
-    // Actualiza el estado currentArtist para mostrar el siguiente artista de la lista
-    // y agrega el artista actual a la lista de artistasSelect.
     const currentIndex = artistas.indexOf(currentArtist);
     const nextIndex = (currentIndex + 1) % artistas.length;
     const nextArtist = artistas[nextIndex];
+  
+    // Actualiza el estado currentArtist para mostrar el siguiente artista de la lista
+    // y agrega el artista actual a la lista de artistasSelect.
     setCurrentArtist(nextArtist);
-    setArtistasSelect([...artistasSelect, nextArtist.nombre]); // Guardar solo el nombre del artista
+    setArtistasSelect((prevArtistasSelect) => [...prevArtistasSelect, currentArtist.nombre]);
   };
-
 
   localStorage.setItem("artistas", JSON.stringify(artistasSelect));
 
@@ -66,6 +66,7 @@ const navigate= useNavigate()
 
     if (nextArtist !== currentArtist) {
       setCurrentArtist(nextArtist);
+      setArtistasSelect((prevArtistasSelect) => [...prevArtistasSelect, currentArtist.nombre]);
     }
   };
 
@@ -87,7 +88,7 @@ const navigate= useNavigate()
       })
       .then((data) => {
         localStorage.setItem("idPlaylist", data.playlistId)
-        navigate("/playlist")
+        navigate("/nav/playlist")
       })
       .catch((error) => console.error(error));
   };
