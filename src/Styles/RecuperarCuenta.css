@@ -129,20 +129,19 @@ button.inactivo {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #FDFEFF;
+    background-color: #d8d3d3;
     position: absolute;
     padding: 5px 5px 5px 5px;
     border: 1rem;
-    width: 368px;
-    height: 418px;
-    background: rgba(0, 0, 0, .3);
+
+
 
 }
 
 .modalContent {
     height: 300px;
     width: 200px;
-    background-color: #FDFEFF;
+    background-color: #f7f7f7;
     display: flex;
     justify-content: center;
     align-items: center;
