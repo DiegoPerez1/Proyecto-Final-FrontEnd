@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Navigate, useNavigate } from "react-router-dom";
 import "../Styles/CupidoMusical.css";
+import { Link } from "react-router-dom";
 import Vector from "../assets/Vector.svg";
 import like from "../assets/green-heart.svg";
 import pass from "../assets/red-cross.svg";
@@ -50,7 +51,7 @@ function CupidoMusical() {
     const currentIndex = artistas.indexOf(currentArtist);
     const nextIndex = (currentIndex + 1) % artistas.length;
     const nextArtist = artistas[nextIndex];
-  
+
     // Actualiza el estado currentArtist para mostrar el siguiente artista de la lista
     // y agrega el artista actual a la lista de artistasSelect.
     setCurrentArtist(nextArtist);
@@ -96,7 +97,9 @@ function CupidoMusical() {
     <div id="container">
       <div id="top-gradient"></div>
       <header id="header">
-        <img src={Vector} alt="icono de flecha" />
+        <Link to="/nav/home">
+          <img src={Vector} alt="icono de flecha" />
+        </Link>
         <p id="cupido-title">Cupido Musical</p>
       </header>
       <main>

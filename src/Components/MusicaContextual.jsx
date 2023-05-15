@@ -65,6 +65,10 @@ function MusicaContextual() {
             setGeneroSeleccionado(generoAsociado.id);
             localStorage.setItem("generoSeleccionado", generoAsociado.id);
         }
+        setSelectedOption(selectedOption);
+        setIsElectronicaEnabled(
+            selectedOption !== null && selectedOption.value === "opcion1"
+        );
     };
 
     const handleChangeGenero = (event) => {
@@ -107,7 +111,8 @@ function MusicaContextual() {
                     <select
                         id="actividades"
                         value={actividadSeleccionada || ""}
-                        onChange={handleChangeActividad}>
+                        onChange={handleChangeActividad}
+                    >
                         <option value="">Actividad </option>
                         {actividades.map((actividad) => (
                             <option key={actividad.id} value={actividad.id}>
@@ -146,7 +151,8 @@ function MusicaContextual() {
                         onClick={() => {
                             setIsEstiloElectronica(!isEstiloElectronica);
                         }}
-                        disabled={!isElectronicaEnabled}>
+                        disabled={!isElectronicaEnabled}
+                    >
                         Electronica
                     </button>
                     <button className="genero1">Disco </button>

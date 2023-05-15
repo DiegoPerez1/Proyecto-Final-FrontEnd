@@ -2,8 +2,10 @@ import "../Styles/Home.css";
 import { Link } from "react-router-dom";
 import historyIcon from "../assets/history.svg";
 import notificationIcon from "../assets/notification.svg";
+import notificationIcon2 from "../assets/notification2.svg";
 import cupido from "../assets/cupido.svg";
 import contextual from "../assets/contextual.svg";
+
 
 function Home() {
   return (
@@ -14,6 +16,7 @@ function Home() {
         <div id="icons">
           <img src={historyIcon} />
           <img src={notificationIcon} />
+          <img id='puntonaranja' src={notificationIcon2} />
         </div>
       </header>
 

@@ -20,7 +20,6 @@ import Playlists from './Components/Playlists';
 import CreatePlaylist from './Components/CreatePlaylist';
 import RecuperarCuenta from './Components/RecuperarCuenta.jsx'
 import Error404 from './Components/error404.jsx';
-import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import TerminosYCondicionnes from './Components/TerminosYCondicionnes';
 
 
@@ -59,11 +58,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "home",
-        element: (
-          <CSSTransition key="/nav/home" classNames="fade" timeout={300}>
-            <Home />
-          </CSSTransition>
-        ),
+        element: <Home />,
       },
       {
         path: "search",
@@ -89,15 +84,13 @@ const router = createBrowserRouter([
   },
   {
     path: "/musica-contextual",
-    element: (
-      <CSSTransition key="/musica-contextual" classNames="fade" timeout={300}>
-        <MusicaContextual />
-      </CSSTransition>
-    )
+    element: <MusicaContextual />
+    ,
   },
   {
     path: "/playlistMC",
-    element: <PlaylistMC />,
+    element: <PlaylistMC />
+    ,
   },
   {
     path: "/playlist",
@@ -111,8 +104,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <TransitionGroup>
-      <RouterProvider router={router} />
-    </TransitionGroup>
+
+    <RouterProvider router={router} />
+
   </React.StrictMode>
 );
