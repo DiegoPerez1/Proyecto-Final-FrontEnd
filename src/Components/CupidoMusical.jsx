@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
 import "../Styles/CupidoMusical.css";
 import Vector from "../assets/Vector.svg";
 import like from "../assets/green-heart.svg";
 import pass from "../assets/red-cross.svg";
+import Playlists from "./Playlists";
 
 
 function CupidoMusical() {
@@ -11,8 +12,9 @@ function CupidoMusical() {
   const [currentArtist, setCurrentArtist] = useState([]); //artista actual que se muestra en pantalla
   const [artistasSelect, setArtistasSelect] = useState([]); //almacena artistas seleccionados por el usuario en una lista
   const [playlistCreated, setPlaylistCreated] = useState(false);
+  const [cancionesPlaylist, setCancionesPlaylist] = useState([]);
+const navigate= useNavigate()
 
-  
 
   useEffect(() => {
     // se realiza una solicitud GET a /api/artistas para obtener una lista de artistas desde el servidor.
@@ -84,7 +86,8 @@ function CupidoMusical() {
         return response.json();
       })
       .then((data) => {
-        setPlaylistCreated(true);
+        localStorage.setItem("idPlaylist", data.playlistId)
+        navigate("/playlist")
       })
       .catch((error) => console.error(error));
   };
