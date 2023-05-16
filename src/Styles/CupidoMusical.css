@@ -6,6 +6,7 @@
   left: 35px;
   top: 24px;
 }
+
 #cupido-title {
   font-family: "Rubik";
   font-style: normal;
@@ -16,47 +17,54 @@
   letter-spacing: 0.5px;
   color: #26262e;
 }
-#back-cupido{
+
+#back-cupido {
   position: absolute;
+  top: 0.2rem;
 }
-#btn-create{
+
+#btn-create {
   position: absolute;
-width: 320px;
-height: 48px;
-left: 35px;
-top: 680px;
-background: #E4E6E8;
-border-radius: 0px 16px;
+  width: 320px;
+  height: 48px;
+  left: 35px;
+  top: 680px;
+  background: #E4E6E8;
+  border-radius: 0px 16px;
 }
-#img-artist{
+
+#img-artist {
   filter: drop-shadow(0px 0px 8px rgba(8, 8, 17, 0.08)) drop-shadow(8px 8px 16px rgba(8, 8, 17, 0.08));
-border-radius: 0px 48px;
-position: absolute;
-width: 272px;
-height: 272px;
-top: 148px;
-left: 55px;
-background-color: #FDFEFF;
+  border-radius: 0px 48px;
+  position: absolute;
+  width: 272px;
+  height: 272px;
+  top: 148px;
+  left: 55px;
+  background-color: #FDFEFF;
 }
-#both-icons{
+
+#both-icons {
   display: flex;
   gap: 1.5rem;
   position: absolute;
   top: 390px;
   left: 114px;
 }
-.icon-btn{
-display: flex;
-align-items: center;
-justify-content: center;
-width: 64px;
-height: 64px;
-background: #FDFEFF;
-box-shadow: 0px 0px 5.33333px rgba(8, 8, 17, 0.04), 1.77778px 1.77778px 3.55556px rgba(8, 8, 17, 0.08);
-border-radius: 32px;
-border: none;
+
+.icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  background: #FDFEFF;
+  box-shadow: 0px 0px 5.33333px rgba(8, 8, 17, 0.04), 1.77778px 1.77778px 3.55556px rgba(8, 8, 17, 0.08);
+  border-radius: 32px;
+  border: none;
 }
-#nombre-artista{
+
+#nombre-artista {
   position: absolute;
   top: 500px;
   left: 150px;
