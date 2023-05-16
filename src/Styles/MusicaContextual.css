@@ -112,8 +112,11 @@ select option:not(:disabled) {
     position: absolute;
     width: 373px;
     height: 180px;
-
     top: 475px;
+}
+
+.generos {
+    margin-left: 30px;
 }
 
 #titulo-selectGeneros {
