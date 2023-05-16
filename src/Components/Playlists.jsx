@@ -15,10 +15,12 @@ import verify from "../assets/verify.svg";
 import copia from "../assets/copia.svg";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import moment from "moment";
 
 function Playlists() {
   const [cancionesPlaylist, setCancionesPlaylist] = useState([]);
-   
+  const [duracionTotal, setDuracionTotal] = useState(0);
+
   useEffect(() => {
     const fetchCanciones = async () => {
       try {
@@ -29,49 +31,93 @@ function Playlists() {
         if (response.ok) {
           const data = await response.json();
           setCancionesPlaylist(data.canciones);
+
+          const duracionTotalEnSegundos = data.canciones.reduce(
+            (total, cancion) => {
+              if (cancion.duracion) {
+                const duracion = moment.duration(cancion.duracion);
+                return total + duracion.asSeconds();
+              }
+              return total;
+            },
+            0
+          );
+
+          setDuracionTotal(duracionTotalEnSegundos);
         }
       } catch (error) {
         console.error(error);
       }
     };
+
     fetchCanciones();
   }, []);
+
+  const formatDuracion = (duracionEnSegundos) => {
+    const horas = Math.floor(duracionEnSegundos / 3600);
+    const minutos = Math.floor((duracionEnSegundos % 3600) / 60);
+    const segundos = Math.floor(duracionEnSegundos % 60);
+
+    const duracionFormateada = `${horas.toString().padStart(2, "0")}:${minutos
+      .toString()
+      .padStart(2, "0")}:${segundos.toString().padStart(2, "0")}`;
+
+    return duracionFormateada;
+  };
 
   return (
     <div className="contenedorPlayList">
       <div id="top-gradient"></div>
       <header className="headerPlayList">
-      <Link to='/nav/home'><img id="back-arrow" src={leftArrow}/></Link>
+        <Link to="/nav/home">
+          <img id="back-arrow" src={leftArrow} alt="Back" />
+        </Link>
         <div id="titulo-playlist">
           <p>Generada del Cupido Musical</p>
-       {/*    <p>Playlist Generada</p> */}
+          {/*    <p>Playlist Generada</p> */}
         </div>
-        <img src={tresPuntos} id="titulo-opciones" />
+        <img src={tresPuntos} alt="Options" id="titulo-opciones" />
       </header>
       {cancionesPlaylist.map((cancion) => (
-      <section className="albumPlaylistSection">
-        <img src={`${"/"}${cancion.imagen}${".png"}`} id="imagenes-playlist"/>
-        <img src={`${"/"}${cancion.imagen}${".png"}`} id="imagenes-playlist"/>
-        <img src={`${"/"}${cancion.imagen}${".png"}`} id="imagenes-playlist"/>
-        <img src={`${"/"}${cancion.imagen}${".png"}`} id="imagenes-playlist"/>
-      </section>
-  ))}
+        <section className="albumPlaylistSection" key={cancion.id}>
+          <img
+            src={`${"/"}${cancion.imagen}${".png"}`}
+            alt="Album"
+            id="imagenes-playlist"
+          />
+          <img
+            src={`${"/"}${cancion.imagen}${".png"}`}
+            alt="Album"
+            id="imagenes-playlist"
+          />
+          <img
+            src={`${"/"}${cancion.imagen}${".png"}`}
+            alt="Album"
+            id="imagenes-playlist"
+          />
+          <img
+            src={`${"/"}${cancion.imagen}${".png"}`}
+            alt="Album"
+            id="imagenes-playlist"
+          />
+        </section>
+      ))}
       <section id="logos-duracion">
-        <img src={logoSmall} />
-        <img src={verify} />
-        <img src={share} />
+        <img src={logoSmall} alt="Logo" />
+        <img src={verify} alt="Verify" />
+        <img src={share} alt="Share" />
         <div id="timeList">
-          <p>00:00</p>
-          <img src={reloj} />
+          <p>{formatDuracion(duracionTotal)}</p>
+          <img src={reloj} alt="Clock" />
         </div>
       </section>
 
       <section id="icons-playlist">
-        <img src={copia} />
+        <img src={copia} alt="Copy" />
         <p>Crear Copia</p>
         <div id="play-shuffle">
-          <img src={shuffle} alt="" className="iconsPlaylist" />
-          <img src={playButton} alt="" className="playButton" />
+          <img src={shuffle} alt="Shuffle" className="iconsPlaylist" />
+          <img src={playButton} alt="Play" className="playButton" />
         </div>
       </section>
       <section className="songsPlaylistSection">
@@ -80,13 +126,14 @@ function Playlists() {
             <li key={cancion.id}>
               <img
                 src={`${"/"}${cancion.imagen}${".png"}`}
+                alt="Song"
                 className="playlistSongsIcons"
               />
               <div id="nombre-artista-playlist">
                 <h5 id="nombre-cancion">{cancion.nombre}</h5>
                 <p id="artista-cancion">{cancion.artista}</p>
               </div>
-              <img src={tresPuntos} id="detalles-cancion" />
+              <img src={tresPuntos} alt="Details" id="detalles-cancion" />
             </li>
           ))}
         </ul>
