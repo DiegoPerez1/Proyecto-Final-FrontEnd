@@ -9,7 +9,7 @@ function Home() {
   return (
     <div id="container">
       <div id="top-gradient"></div>
-      <header id="header">
+      <header id="header-home">
         <h2>Música ya</h2>
         <div id="icons">
           <img src={historyIcon} />

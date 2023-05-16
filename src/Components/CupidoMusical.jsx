@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Navigate, useNavigate } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import "../Styles/CupidoMusical.css";
 import Vector from "../assets/Vector.svg";
 import like from "../assets/green-heart.svg";
@@ -66,7 +66,7 @@ const navigate= useNavigate()
 
     if (nextArtist !== currentArtist) {
       setCurrentArtist(nextArtist);
-      setArtistasSelect((prevArtistasSelect) => [...prevArtistasSelect, currentArtist.nombre]);
+      setArtistasSelect((prevArtistasSelect) => [...prevArtistasSelect, currentArtist?.nombre]);
     }
   };
 
@@ -95,8 +95,8 @@ const navigate= useNavigate()
   return (
     <div id="container">
       <div id="top-gradient"></div>
-      <header id="header">
-        <img src={Vector} alt="icono de flecha" />
+      <header id="header-cupido">
+      <Link to="/nav/home"><img src={Vector} id="back-cupido"/></Link>
         <p id="cupido-title">Cupido Musical</p>
       </header>
       <main>

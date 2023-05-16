@@ -64,7 +64,7 @@ function Search() {
           console.log(item.imagen)
           return (
             <div id="track-container" key={index}>
-                <img id="foto" src={`../assets/cupido-img/${item.imagen}.png`} alt={`Foto de ${item.imagen}`} />
+                <img id="foto" src={`${"/"}${item.imagen}.png`} alt={`Foto de ${item.imagen}`} />
               <div id="artist-and-name">
                 <div id="artist">{item.artista}</div>
                 <div id="song-name">{item.nombre}</div>

@@ -52,6 +52,8 @@
   top: 200px;
   left: 35px;
   overflow-y: scroll;
+  border: 2px solid #bfc0c1;
+  border-radius: 0px 16px;
 }
 #track-container {
   display: flex;

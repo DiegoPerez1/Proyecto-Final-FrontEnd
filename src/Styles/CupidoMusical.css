@@ -1,10 +1,11 @@
-#header {
+#header-cupido {
   justify-content: flex-start;
   position: absolute;
   width: 320px;
   height: 40px;
   left: 35px;
-  top: 24px;
+  top: 35px;
+  gap: 5rem;
 }
 #cupido-title {
   font-family: "Rubik";
@@ -15,6 +16,9 @@
   text-align: center;
   letter-spacing: 0.5px;
   color: #26262e;
+}
+#back-cupido{
+  position: absolute;
 }
 #btn-create{
   position: absolute;
