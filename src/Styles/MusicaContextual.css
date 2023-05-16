@@ -200,3 +200,56 @@ h7 {
 #actividades {
     margin-left: 55px
 }
+
+#contenedorModal {
+    width: 300px;
+    margin-top: 70px;
+    margin-left: 5px;
+    /* margin: 10px; */
+    height: fit-content;
+    border-radius: 100%;
+}
+
+#tituloModal {
+    text-align: center;
+    font-size: 23px;
+}
+
+#fotoModal {
+    margin-left: 8px;
+}
+
+#contenidoModal {
+    text-align: center;
+    margin: 40px 18px;
+
+}
+
+#botonEntendido {
+    width: 250px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.901);
+    color: white;
+}
+
+#mensajeModal {
+    text-align: center;
+    cursor: pointer;
+}
+
+#container.blur {
+    filter: blur(4px);
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    /* Color de fondo oscuro con transparencia */
+    z-index: 9999;
+    /* Asegura que la capa de superposición esté por encima de otros elementos */
+}

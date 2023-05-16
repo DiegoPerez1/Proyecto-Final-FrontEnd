@@ -4,7 +4,10 @@ import { Link } from "react-router-dom";
 import leftArrow from "../assets/Vector.svg";
 import Dropdown from "./Dropdown.jsx";
 import axios from "axios";
-import vector from "../assets/vectorabajo.svg"
+import vector from "../assets/vectorabajo.svg";
+import Modal from 'react-modal';
+import ModalMC from "../assets/modalMC.svg"
+
 
 function MusicaContextual() {
     const [selectedOption, setSelectedOption] = useState(null);
@@ -80,16 +83,33 @@ function MusicaContextual() {
     function handleGeneroSeleccionado(genero) {
         setGeneroSeleccionado(genero);
     }
-    function handleSelectChange(selectedOption) {
-        setSelectedOption(selectedOption);
-        setIsElectronicaEnabled(
-            selectedOption !== null && selectedOption.value === "opcion1"
-        );
-    }
+
+    // function handleSelectChange(selectedOption) {
+    //     setSelectedOption(selectedOption);
+    //     setIsElectronicaEnabled(
+    //         selectedOption !== null && selectedOption.value === "opcion1"
+    //     );
+    // }
+
+
+    // MODAL
+
+    const [modalIsOpen, setModalIsOpen] = useState(false);
+
+    const openModal = () => {
+        setModalIsOpen(true);
+    };
+    useEffect(() => {
+        openModal(); // Abre el modal cuando se carga el componente
+    }, []);
+
+    const closeModal = () => {
+        setModalIsOpen(false);
+    };
 
 
     return (
-        <div id="container">
+        <div id="container" className={modalIsOpen ? 'blur' : ''}>
             <div id="top-gradient"></div>
             <div id="headerMC">
                 <Link to="/nav/home">
@@ -103,7 +123,7 @@ function MusicaContextual() {
                     <h1> ¿Cómo te sientes? </h1>
                     <button id="estadoDeAnimo">
                         <h7>Estado de Ánimo</h7>
-                        <img id='vector' src={vector}></img>
+                        {/* <img id='vector' src={vector}></img> */}
                     </button>
                 </div>
                 <div>
@@ -169,6 +189,17 @@ function MusicaContextual() {
                     Crear Playlist
                 </button>
             </Link>
+            {modalIsOpen && <div className="overlay"></div>}
+            <div >
+                <Modal id="contenedorModal" isOpen={modalIsOpen} onRequestClose={closeModal}>
+                    <p id='tituloModal'>Música Contextual</p>
+                    <img id='fotoModal' src={ModalMC}></img>
+                    <p id='contenidoModal'>Llena cuantos campos quieras y crearemos una playlist en base a tus respuestas.</p>
+                    <button id='botonEntendido' onClick={closeModal}>Entendido</button>
+                    <p id='mensajeModal' onClick={closeModal}> No volver a mostrar</p>
+                </Modal>
+            </div>
+
 
         </div>
     );

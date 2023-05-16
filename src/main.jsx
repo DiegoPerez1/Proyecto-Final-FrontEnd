@@ -1,4 +1,3 @@
-
 import './Styles/index.css'
 import React from 'react';
 import ReactDOM from 'react-dom/client'
@@ -19,8 +18,8 @@ import ProfileConfig from './Components/ProfileConfig';
 import Playlists from './Components/Playlists';
 import CreatePlaylist from './Components/CreatePlaylist';
 import RecuperarCuenta from './Components/RecuperarCuenta.jsx'
-import Error404 from './Components/error404.jsx';
-import TerminosYCondicionnes from './Components/TerminosYCondicionnes';
+import Error404 from './Components/Error404.jsx';
+import TerminosYCondiciones from './Components/TerminosYCondiciones';
 
 
 const router = createBrowserRouter([
@@ -76,7 +75,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/terminos-condiciones",
-    element: <TerminosYCondicionnes />
+    element: <TerminosYCondiciones />
   },
   {
     path: "/cupidomusical",

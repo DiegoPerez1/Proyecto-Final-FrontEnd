@@ -2,7 +2,7 @@ import React from 'react';
 import "../Styles/error404.css";
 import { Link } from "react-router-dom";
 
-function error404() {
+function Error404() {
     return (
         <div id="container">
             <div id="top-gradient"></div>
@@ -16,4 +16,4 @@ function error404() {
     )
 }
 
-export default error404
+export default Error404

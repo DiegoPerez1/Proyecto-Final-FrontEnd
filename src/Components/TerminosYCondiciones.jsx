@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from "react-router-dom";
 import leftArrow from '../assets/Vector.svg'
 import '../Styles/TerminosYCondiciones.css'
-function TerminosYCondicionnes() {
+function TerminosYCondiciones() {
     return (
 
         <div id='top-container-recuperarCuenta' className='containerTERMyCONDI' >
@@ -43,4 +43,4 @@ function TerminosYCondicionnes() {
     )
 }
 
-export default TerminosYCondicionnes
+export default TerminosYCondiciones

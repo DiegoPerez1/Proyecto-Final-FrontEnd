@@ -6,6 +6,8 @@ import Vector from "../assets/Vector.svg";
 import like from "../assets/green-heart.svg";
 import pass from "../assets/red-cross.svg";
 import Playlists from "./Playlists";
+import Modal from 'react-modal';
+import ModalC from "../assets/modalC.svg";
 
 
 function CupidoMusical() {
@@ -93,8 +95,24 @@ function CupidoMusical() {
       })
       .catch((error) => console.error(error));
   };
+
+
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+
+  const openModal = () => {
+    setModalIsOpen(true);
+  };
+  useEffect(() => {
+    openModal(); // Abre el modal cuando se carga el componente
+  }, []);
+
+  const closeModal = () => {
+    setModalIsOpen(false);
+  };
+
+
   return (
-    <div id="container">
+    <div id="container" className={modalIsOpen ? 'blur' : ''}>
       <div id="top-gradient"></div>
       <header id="header">
         <Link to="/nav/home">
@@ -118,6 +136,18 @@ function CupidoMusical() {
       <button id="btn-create" onClick={onClickCrearPlaylist}>
         Crear Playlist
       </button>
+
+      <div >
+        {modalIsOpen && <div className="overlay"></div>}
+        <Modal id="contenedorModal" isOpen={modalIsOpen} onRequestClose={closeModal}>
+          <p id='tituloModal'> Cupido Musical</p>
+          <img id='fotoModal' src={ModalC}></img>
+          <p id='contenidoModal'>Luego de al menos 2 me gusta, confirma tu selección y crearemos una playlist rápida con los artistas que fueron un match.</p>
+          <button id='botonEntendido' onClick={closeModal}>Entendido</button>
+          <p id='mensajeModal' onClick={closeModal}> No volver a mostrar</p>
+        </Modal>
+      </div>
+
     </div>
   );
 }
