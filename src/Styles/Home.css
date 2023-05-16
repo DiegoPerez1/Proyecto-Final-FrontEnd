@@ -101,3 +101,9 @@
   letter-spacing: 0.5px;
   color: #45464B;
 }
+
+#puntonaranja {
+  position: absolute;
+  top: 17%;
+  left: 95%;
+}

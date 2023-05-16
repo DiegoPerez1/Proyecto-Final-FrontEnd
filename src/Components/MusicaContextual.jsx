@@ -35,6 +35,10 @@ function MusicaContextual() {
         } catch (error) {
             console.error(error);
         }
+        setSelectedOption(selectedOption);
+        setIsElectronicaEnabled(
+            selectedOption !== null && selectedOption.value === "opcion1"
+        );
     };
     useEffect(() => {
         if (generoSeleccionado.length > 0) {
@@ -64,6 +68,7 @@ function MusicaContextual() {
     console.log(generoSeleccionado)
 
 
+
     return (
         <div id="container">
             <div id="top-gradient"></div>
@@ -77,22 +82,16 @@ function MusicaContextual() {
                         ¿Cuál es la ocasión?
                     </label>
                     <select
-                        id="actividad"
-                        name="actividad"
-                        onChange={handleActividadChange}
+                        id="actividades"
+                        value={actividadSeleccionada || ""}
+                        onChange={handleChangeActividad}
                     >
-                        <option value="" disabled selected>
-                            Actividad
-                        </option>
-                        <option value="Ejercicio Físico">Ejercicio Fisico</option>
-                        <option value="Limpieza">Limpieza</option>
-                        <option value="Celebracion">Celebracion</option>
-                        <option value="Dormir">Dormir</option>
-                        <option value="Meditar">Meditar</option>
-                        <option value="Social">Social</option>
-                        <option value="Estudiar">Estudiar</option>
-                        <option value="Relajacion">Relajacion</option>
-                        <option value="Viajando">Viajando</option>
+                        <option value="">Actividad </option>
+                        {actividades.map((actividad) => (
+                            <option key={actividad.id} value={actividad.id}>
+                                {actividad.nombre}
+                            </option>
+                        ))}
                     </select>
                 </div>
 
@@ -129,107 +128,11 @@ function MusicaContextual() {
                 <p>Selecciona hasta 3 géneros:</p>
                 <div className="generos">
                     <button
-                        className={`genero1 ${generoSeleccionado === "Rock" ? "seleccionado" : ""
-                            }`}
-                        onClick={() => handleGeneroClick("Rock")}
-                    >
-                        Rock
-                    </button>
-                    <button
-                        className={`genero1 ${generoSeleccionado === "Country" ? "seleccionado" : ""
-                            }`}
-                        onClick={() => handleGeneroClick("Country")}
-                    >
-                        Country
-                    </button>
-                    <button
-                        className={`genero1 ${generoSeleccionado === "Soul" ? "seleccionado" : ""
-                            }`}
-                        onClick={() => handleGeneroClick("Soul")}
-                    >
-                        Soul
-                    </button>
-                    <button
-                        className={`genero1 ${generoSeleccionado === "Jazz" ? "seleccionado" : ""
-                            }`}
-                        onClick={() => handleGeneroClick("Jazz")}
-                    >
-                        Jazz
-                    </button>
-                    <button
-                        className={`genero1 ${generoSeleccionado === "Blues" ? "seleccionado" : ""
-                            }`}
-                        onClick={() => handleGeneroClick("Blues")}
-                    >
-                        Blues
-                    </button>
-                    <button
-                        className={`genero1 ${generoSeleccionado === "Hip-Hop" ? "seleccionado" : ""
-                            }`}
-                        onClick={() => handleGeneroClick("Hip-Hop")}
-                    >
-                        Hip-Hop
-                    </button>
-                    <button
-                        className={`genero1 ${generoSeleccionado === "Pop" ? "seleccionado" : ""
-                            }`}
-                        onClick={() => handleGeneroClick("Pop")}
-                    >
-                        Pop
-                    </button>
-                    <button
-                        className={`genero1 ${generoSeleccionado === "Reggae" ? "seleccionado" : ""
-                            }`}
-                        onClick={() => handleGeneroClick("Reggae")}
-                    >
-                        Reggae
-                    </button>
-                    <button
-                        className={`genero1 ${generoSeleccionado === "Folk" ? "seleccionado" : ""
-                            }`}
-                        onClick={() => handleGeneroClick("Folk")}
-                    >
-                        Folk
-                    </button>
-                    <button
-                        className={`genero1 ${generoSeleccionado === "R&B" ? "seleccionado" : ""
-                            }`}
-                        onClick={() => handleGeneroClick("R&B")}
-                    >
-                        R&B
-                    </button>
-                    <button
-                        className={`genero1 ${generoSeleccionado === "Clasico" ? "seleccionado" : ""
-                            }`}
-                        onClick={() => handleGeneroClick("Clasico")}
-                    >
-                        Clasico
-                    </button>
-                    <button
-                        className={`genero1 ${generoSeleccionado === "Alternativo" ? "seleccionado" : ""
-                            }`}
-                        onClick={() => handleGeneroClick("Alternativo")}
-                    >
-                        Alternativo
-                    </button>
-                    <button
-                        className={`genero1 ${generoSeleccionado === "Ambiente" ? "seleccionado" : ""
-                            }`}
-                        onClick={() => handleGeneroClick("Ambiente")}
-                    >
-                        Ambiente
-                    </button>
-                    <button
-                        className={`genero1 ${generoSeleccionado === "EDM" ? "seleccionado" : ""
-                            }`}
-                        onClick={() => handleGeneroClick("EDM")}
-                    >
-                        EDM
-                    </button>
-                    <button
-                        className={`genero1 ${generoSeleccionado === "Electronica" ? "seleccionado" : ""
-                            }`}
-                        onClick={() => handleGeneroClick("Electronica")}
+                        className={isEstiloElectronica ? "electronica2" : "electronica1"}
+                        onClick={() => {
+                            setIsEstiloElectronica(!isEstiloElectronica);
+                        }}
+                        disabled={!isElectronicaEnabled}
                     >
                         Electronica
                     </button>
