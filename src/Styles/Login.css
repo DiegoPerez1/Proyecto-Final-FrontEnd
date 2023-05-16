@@ -1,7 +1,5 @@
 .ContainerLogIn {
   position: relative;
-  width: 418px;
-  height: 844px;
   display: flex;
   flex-direction: column;
   overflow: hidden;

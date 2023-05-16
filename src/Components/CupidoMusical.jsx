@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react";
-import { Navigate, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../Styles/CupidoMusical.css";
-import { Link } from "react-router-dom";
 import Vector from "../assets/Vector.svg";
 import like from "../assets/green-heart.svg";
 import pass from "../assets/red-cross.svg";
 import Playlists from "./Playlists";
 import Modal from 'react-modal';
 import ModalC from "../assets/modalC.svg";
+
 
 
 function CupidoMusical() {
@@ -69,7 +69,7 @@ function CupidoMusical() {
 
     if (nextArtist !== currentArtist) {
       setCurrentArtist(nextArtist);
-      setArtistasSelect((prevArtistasSelect) => [...prevArtistasSelect, currentArtist.nombre]);
+      setArtistasSelect((prevArtistasSelect) => [...prevArtistasSelect, currentArtist?.nombre]);
     }
   };
 
@@ -114,10 +114,8 @@ function CupidoMusical() {
   return (
     <div id="container" className={modalIsOpen ? 'blur' : ''}>
       <div id="top-gradient"></div>
-      <header id="header">
-        <Link to="/nav/home">
-          <img src={Vector} alt="icono de flecha" />
-        </Link>
+      <header id="header-cupido">
+        <Link to="/nav/home"><img src={Vector} id="back-cupido" /></Link>
         <p id="cupido-title">Cupido Musical</p>
       </header>
       <main>

@@ -44,7 +44,7 @@ function Playlists() {
       <Link to='/nav/home'><img id="back-arrow" src={leftArrow}/></Link>
         <div id="titulo-playlist">
           <p>Generada del Cupido Musical</p>
-          <p>Playlist Generada</p>
+       {/*    <p>Playlist Generada</p> */}
         </div>
         <img src={tresPuntos} id="titulo-opciones" />
       </header>

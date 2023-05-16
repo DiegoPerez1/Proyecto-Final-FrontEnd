@@ -2,8 +2,7 @@
     margin: 0%;
     padding: 0%;
     position: relative;
-    width: 418px;
-    height: 844px;
+    overflow: hidden;
 }
 
 
