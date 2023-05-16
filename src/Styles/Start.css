@@ -3,14 +3,18 @@
   width: 418px;
   height: 844px;
   background: #fdfeff;
+
 }
+
 #background {
   position: relative;
   width: 418px;
   height: 792px;
   background-size: cover;
   background-image: url("../src/assets/fondo.gif");
+
 }
+
 #background::before {
   content: "";
   position: absolute;
@@ -21,6 +25,7 @@
   opacity: 0.5;
   background-color: white;
 }
+
 #top-container {
   width: 368px;
   height: 418px;
@@ -28,7 +33,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
 }
+
 #logo {
   position: absolute;
   width: 207.64px;
@@ -36,6 +43,7 @@
   left: 80px;
   top: 176px;
 }
+
 #title-start {
   position: absolute;
   width: 196px;
@@ -51,19 +59,19 @@
   letter-spacing: -0.794434px;
   color: #26262e;
 }
+
 #bottom-container {
   position: absolute;
   width: 418px;
   height: 338px;
   left: 0px;
   top: 454px;
-  background: linear-gradient(
-    180deg,
-    rgba(253, 254, 255, 0) 0%,
-    #fdfeff 45.83%,
-    #fdfeff 100%
-  );
+  background: linear-gradient(180deg,
+      rgba(253, 254, 255, 0) 0%,
+      #fdfeff 45.83%,
+      #fdfeff 100%);
 }
+
 #btn-container {
   display: flex;
   flex-direction: column;
@@ -71,6 +79,7 @@
   align-items: center;
   gap: 32px;
 }
+
 button {
   width: 320px;
   height: 48px;
@@ -84,19 +93,24 @@ button {
   text-align: center;
   letter-spacing: 0.5px;
 }
+
 #btn-register {
   background-color: #ff8e0a;
   color: #fdfeff;
   border: none;
+  cursor: pointer;
 }
+
 #btn-login {
   border: none;
   background-color: #fdfeff;
 }
+
 .login-with {
   display: flex;
   align-items: center;
 }
+
 .icon {
   position: absolute;
   left: 4.5rem;

@@ -2,7 +2,7 @@
   justify-content: flex-start;
   position: absolute;
   width: 320px;
-  height: 40px;
+  height: 48px;
   left: 35px;
   top: 35px;
   gap: 5rem;
@@ -41,24 +41,37 @@ background-color: #FDFEFF;
 }
 #both-icons{
   display: flex;
-  gap: 1.5rem;
+  align-items: center;
+  flex-direction: column;
+  gap: 12px;
   position: absolute;
-  top: 390px;
-  left: 114px;
+  width: 373px;
+  height: 180px;
+  left: -10px;
+  top: 410px;
 }
-.icon-btn{
-display: flex;
-align-items: center;
-justify-content: center;
-width: 64px;
-height: 64px;
-background: #FDFEFF;
-box-shadow: 0px 0px 5.33333px rgba(8, 8, 17, 0.04), 1.77778px 1.77778px 3.55556px rgba(8, 8, 17, 0.08);
-border-radius: 32px;
-border: none;
+
+#tituloGeneros {
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 35px;
 }
-#nombre-artista{
-  position: absolute;
-  top: 500px;
-  left: 150px;
+
+.genero1 {
+  height: fit-content;
+  width: fit-content;
+  padding: 5px;
+  margin: 8px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.generos {
+  margin-left: 45px;
+}
+
+.seleccionado {
+  background-color: black;
+  color: white;
 }

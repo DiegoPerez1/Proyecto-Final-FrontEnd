@@ -19,6 +19,9 @@ import ProfileConfig from './Components/ProfileConfig';
 import Playlists from './Components/Playlists';
 import CreatePlaylist from './Components/CreatePlaylist';
 import RecuperarCuenta from './Components/RecuperarCuenta.jsx'
+import Error404 from './Components/error404.jsx';
+import TerminosYCondicionnes from './Components/TerminosYCondicionnes';
+
 
 const router = createBrowserRouter([
   {
@@ -72,21 +75,37 @@ const router = createBrowserRouter([
     ],
   },
   {
+    path: "/terminos-condiciones",
+    element: <TerminosYCondicionnes />
+  },
+  {
     path: "/cupidomusical",
     element: <CupidoMusical />,
   },
   {
     path: "/musica-contextual",
-    element: <MusicaContextual />,
+    element: <MusicaContextual />
+    ,
   },
   {
     path: "/playlistMC",
-    element: <PlaylistMC />,
+    element: <PlaylistMC />
+    ,
+  },
+  {
+    path: "/playlist",
+    element: <Playlists />,
+  },
+  {
+    path: "*",
+    element: <Error404 />,
   },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
+
     <RouterProvider router={router} />
+
   </React.StrictMode>
 );

@@ -2,58 +2,54 @@ import "../Styles/Signin2.css";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import leftArrow from "../assets/Vector.svg";
+import { useForm } from "react-hook-form";
 
 function Signin2() {
   const [nombre, setNombre] = useState("");
   const [pass, setPass] = useState("");
   const [email, setEmail] = useState("");
   const navigate = useNavigate();
-  const [userName, setUserName] = useState('');
-  const [password, setPassword] = useState('');
-  const [emails, setEmails] = useState('');
+  const [userName, setUserName] = useState("");
+  const [password, setPassword] = useState("");
+  const [emails, setEmails] = useState("");
   const [habilitarBoton, setHabilitarBoton] = useState(false);
-
+  const { register, formState: { errors }, handleSubmit } = useForm();
 
   const verificarCamposCompletos = () => {
-    if (userName !== '' && password !== '' && emails !== '') {
+    if (userName !== "" && password !== "" && emails !== "") {
       setHabilitarBoton(true);
     } else {
       setHabilitarBoton(false);
     }
-    console.log(verificarCamposCompletos)
   };
 
   const handlepassword = (event) => {
     setPassword(event.target.value);
-    setPass(event.target.value)
+    setPass(event.target.value);
     verificarCamposCompletos();
   };
 
   const handleUser = (event) => {
     setUserName(event.target.value);
-    setNombre(event.target.value)
+    setNombre(event.target.value);
     verificarCamposCompletos();
   };
 
   const handleEmail = (event) => {
     setEmails(event.target.value);
-    setEmail(event.target.value)
+    setEmail(event.target.value);
     verificarCamposCompletos();
   };
-  const registro = async (event) => {
-    event.preventDefault();
 
-
-
-
-
+  const registro = async (data) => {
+    const { email, descripcion, password } = data;
 
     const myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
 
     const raw = JSON.stringify({
-      usuario: nombre,
-      contraseña: pass,
+      usuario: descripcion,
+      contraseña: password,
       email: email,
     });
 
@@ -63,17 +59,16 @@ function Signin2() {
       body: raw,
       redirect: "follow",
     };
+
     try {
       const response = await fetch(
         "http://localhost:3000/api/registro",
         requestOptions
       );
+
       if (response.ok) {
         const respuesta = await response.json();
         navigate("/nav/home");
-        /* alert(
-          "El usuario ha sido registrado. Vuelva a la página principal para ingresar y acceder al menú"
-        );*/
       } else {
         const respuesta = await response.json();
         alert(respuesta.error);
@@ -83,14 +78,18 @@ function Signin2() {
     }
   };
 
+  const onSubmit = handleSubmit(registro);
+
   return (
-    <div className="containerSignIn">
+    <div className="containerSignIn2">
       <div id="top-gradient"></div>
-      <section >
+      <section>
         <section>
-          <Link to='/signin'><img src={leftArrow} alt="" className='arrowSignIn' /></Link>
+          <Link to="/signin">
+            <img src={leftArrow} alt="" className="arrowSignIn" />
+          </Link>
         </section>
-        <section className='headerText'>
+        <section className="headerText">
           <p>Crear cuenta</p>
         </section>
       </section>
@@ -99,41 +98,85 @@ function Signin2() {
         <h2>Ingresa email, nombre de usuario y contraseña</h2>
       </section>
       <br />
-      <form className="formSectionSignIn" action="submit" onSubmit={registro}>
+      <form className="formSectionSignIn" onSubmit={onSubmit}>
         <section className="emailSection">
           <label htmlFor="">Correo electronico:</label>
           <input
             className='inputLogIn'
             type="text"
+            {...register('email', { required: true, pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i, })}
             onChange={
               handleEmail
             }
             value={email}
           />
-          <p>Deberias poder confirmarlo luego</p>
+          {
+            errors.email?.type === 'required' && (
+              <p className="errorTextSingIn">Ingrese un email</p>
+            )
+          }
+          {
+            errors.email?.type === 'pattern' && (
+              <p className="errorTextSingIn">Ingrese un email valido</p>
+            )
+          }
+
         </section>
         <section className="nameSectionSignIn">
           <label htmlFor="">Nombre de usuario:</label>
           <input
             className='inputLogIn'
             type="text"
+            {...register('descripcion', { required: true, minLength: 6 })}
             onChange={handleUser}
             value={nombre}
           />
+          {
+            errors.descripcion?.type === 'required' && (
+              <p className="errorTextSingIn">Ingrese un nombre</p>
+            )
+          }
+          {
+            errors.descripcion?.type === 'minLength' && (
+              <p className="errorTextSingIn">Minimo 6 caracteres</p>
+            )
+          }
         </section>
         <section className="passwordSectionSignIn">
           <label htmlFor="">Contraaseña:</label>
           <input
             className='inputLogIn'
             type="text"
+            {...register('password', { required: true, minLength: 8 })}
             onChange={handlepassword}
             value={pass}
           />
+          {
+            errors.password?.type === 'required' && (
+              <p className="errorTextSingIn">Ingrese una contraseña</p>
+            )
+          }
+          {
+            errors.password?.type === 'minLength' && (
+              <p className="errorTextSingIn">Minimo 8 caracteres</p>
+            )
+          }
           <p className='passVerification'>Debera contener al menos 8 caracteres</p>
         </section>
         <section className='checkBoxSignIn'>
-          <input type="checkbox" className="checkSignIn" />{" "}
-          <p><p>He leido y acepto los <a href="">Terminos</a> y <a href="">Condiciones</a> </p></p>
+          <div className="checkBoxDivSection">
+            <input type="checkbox" className="checkSignIn"
+              {...register('check', { required: true })} />
+            <p>He leido y acepto los <Link to={'/terminos-condiciones'}><a href="">Terminos</a></Link> y <Link to={'/terminos-condiciones'}><a href="">Condiciones</a></Link></p> {" "}
+          </div>
+
+          <div>
+            {
+              errors.check?.type === 'required' && (
+                <p className="errorTextSingIn">Acepta los terminos y condiciones</p>
+              )
+            }
+          </div>
         </section>
         <section className="buttonSectionSignIn">
           <button className={habilitarBoton ? 'activo' : 'inactivo'} disabled={!habilitarBoton}>Continuar</button>

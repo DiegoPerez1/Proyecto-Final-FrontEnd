@@ -1,4 +1,4 @@
-.containerSignIn {
+.containerRevoverAccount {
     margin: 0%;
     padding: 0%;
     width: 100%;
@@ -129,19 +129,18 @@ button.inactivo {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #FDFEFF;
     position: absolute;
     padding: 5px 5px 5px 5px;
     border: 1rem;
     width: 368px;
     height: 418px;
-    background: rgba(0, 0, 0, .3);
+
 
 }
 
 .modalContent {
     height: 300px;
-    width: 200px;
+    width: 250px;
     background-color: #FDFEFF;
     display: flex;
     justify-content: center;
@@ -149,6 +148,8 @@ button.inactivo {
     flex-direction: column;
     gap: 2rem;
     padding: 1rem 1rem 1rem 1rem;
+    border-radius: 1rem;
+    box-shadow: 1px 2px 5px 5px rgb(194, 189, 189);
 }
 
 .modalButton {

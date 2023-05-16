@@ -1,9 +1,11 @@
-.containerSignIn {
+.containerSignIn2 {
+    margin: 0%;
+    padding: 0%;
     position: relative;
-    width: 368px;
-    height: 844px;
-    background: #FDFEFF;
+    overflow: hidden;
 }
+
+
 .titleSectionSignIn {
     margin-top: 3rem;
     padding: 7px;
@@ -11,6 +13,7 @@
     justify-content: center;
     align-items: center;
 }
+
 .formSectionSignIn {
     margin-top: 3rem;
     padding: 7px;
@@ -20,31 +23,47 @@
     align-items: center;
     gap: 1.5rem;
 }
+
 .buttonSectionSignIn {
-    margin-top: 100px;
+
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 .checkBoxSignIn {
     margin-top: 30px;
     gap: 10px;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
+
 a {
     text-decoration: none;
     color: #FF8E0A;
 }
+
+.checkBoxDivSection {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
 .checkSignIn {
     border: 3px solid #BFC0C1;
     border-radius: 0px 8px;
     text-decoration: none;
 }
+
 .buttonSectionSignIn {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 .input {
     outline-color: #FF8E0A;
     border-radius: 0px 16px;
@@ -61,33 +80,45 @@ a {
     align-self: stretch;
     flex-grow: 0;
 }
+
 .arrowSignIn {
     position: absolute;
     left: 5%;
     cursor: pointer;
     padding-top: 3rem;
 }
+
 .header {
     gap: 100px;
 }
+
 .emailSection {
     font-size: 20px;
 }
+
 .nameSectionSignIn {
     font-size: 20px;
 }
+
 .passwordSectionSignIn {
     font-size: 20px;
 }
+
 .passVerification {
     color: #838486;
     font-size: 12px;
     padding-top: 10px;
 }
+
 .buttonSignin {
     width: 320px;
     height: 48px;
     border-radius: 0px 16px;
     cursor: pointer;
     margin-top: 3rem;
+}
+
+.errorTextSingIn {
+    color: #EA0F0F;
+    font-size: 12px;
 }

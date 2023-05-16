@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
-import { Link, Navigate, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../Styles/CupidoMusical.css";
 import Vector from "../assets/Vector.svg";
 import like from "../assets/green-heart.svg";
 import pass from "../assets/red-cross.svg";
-import Playlists from "./Playlists";
+
 
 
 function CupidoMusical() {
@@ -13,7 +13,7 @@ function CupidoMusical() {
   const [artistasSelect, setArtistasSelect] = useState([]); //almacena artistas seleccionados por el usuario en una lista
   const [playlistCreated, setPlaylistCreated] = useState(false);
   const [cancionesPlaylist, setCancionesPlaylist] = useState([]);
-const navigate= useNavigate()
+  const navigate = useNavigate()
 
 
   useEffect(() => {
@@ -50,7 +50,7 @@ const navigate= useNavigate()
     const currentIndex = artistas.indexOf(currentArtist);
     const nextIndex = (currentIndex + 1) % artistas.length;
     const nextArtist = artistas[nextIndex];
-  
+
     // Actualiza el estado currentArtist para mostrar el siguiente artista de la lista
     // y agrega el artista actual a la lista de artistasSelect.
     setCurrentArtist(nextArtist);
